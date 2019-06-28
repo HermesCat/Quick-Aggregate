@@ -1,0 +1,2 @@
+# Quick-Aggregate
+A news/media aggregate to quickly search through your favorite media. 

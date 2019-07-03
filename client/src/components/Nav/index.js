@@ -1,30 +1,21 @@
 import React from "react";
-import "./nav.css";
+import "./style.css";
 
 function Nav() {
   return (
 
     <>
-      <header>
-        <div className="row">
-          <div cassName="col-6">
-            <h1><span className="hot">Quick</span>Aggregate</h1>
-          </div>
-          <div cassName="col-6">
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-              <a className="navbar-brand" href="/">
-                HOME
-    </a>
-              <a className="navbar-brand" href="/">
-                ABOUT
-    </a>
-              <a className="navbar-brand" href="/">
-                CONTACT
-    </a>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">CONTACT</a>
+        </li>
+      </ul>
     </>
 
   );

@@ -1,11 +1,14 @@
 .nav{
-    float: right;
-    margin-right: 3rem;
-    margin-bottom: 0;
+    display: inline;
 }
 
 .nav-link {
     text-decoration: none;
+    display: inline;
     color: red;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.nav-item {
+    display: inline;
 }

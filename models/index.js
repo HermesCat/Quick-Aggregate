@@ -1,4 +1,4 @@
 module.exports = {
-  Book: require("./user"),
-  Book: require("./recipe")
+  Book: require("./recipe"),
+  User: require("./User")
 };

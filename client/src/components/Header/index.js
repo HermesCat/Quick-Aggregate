@@ -16,7 +16,8 @@ function Header() {
                 <div className="col-6">
                     <h1 className="main-title"><span className="highligher">Quick</span>Aggregate</h1>
                 </div>
-                <div className="col-6 navigation">
+                <div className="col-3" />
+                <div className="col-3 navigation">
                     <a className="d-lg-none "><img className="hamburger-icon" src={HamburgerIcon} /></a>
                     <Router>
                         <>

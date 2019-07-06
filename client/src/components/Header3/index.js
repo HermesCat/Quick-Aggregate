@@ -1,23 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "../Nav";
-import "./style.css";
-import HamburgerIcon from "./img/hamburger_icon.png";
 
-
-
-
-function Header() {
+function Header2() {
     return (
 
         <header>
             <div className="row">
-                <div className="col-8">
+                <div className="col-9">
                     <h1 className="main-title"><span className="highligher">Quick</span>Aggregate</h1>
                 </div>
-                <div className="col-4">
+                <div className="col-3">
                     <div className="row">
-                        <a className="menu-icon d-lg-none "><img className="hamburger-icon" src={HamburgerIcon} /></a>
                         <Router>
                             <div>
                                 <Nav />
@@ -29,8 +23,10 @@ function Header() {
                             </div>
                         </Router>
                     </div>
-                    <div className="row button-list d-none d-lg-block">
-                        <div className="col-12">
+                    <div className="row button-list">
+                        <div className="col-2"></div>
+                        <div className="col-4"></div>
+                        <div className="col-6">
                             <button>Login</button>
                             <button>Sign-Up</button>
                         </div>
@@ -41,4 +37,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Header2;

@@ -5,7 +5,7 @@ function Nav() {
   return (
 
     <>
-      <ul class="nav">
+      <ul class="nav d-none d-lg-block">
         <li class="nav-item">
           <a class="nav-link" href="/">HOME</a>
         </li>

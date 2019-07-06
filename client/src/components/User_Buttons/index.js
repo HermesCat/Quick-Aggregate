@@ -3,7 +3,6 @@ import "./style.css";
 
 function User_Buttons(props) {
     return (
-
         <>
             <div className="row">
                 <p>Your saved searches are stored here as buttons.</p>
@@ -11,9 +10,7 @@ function User_Buttons(props) {
             <div className="row" id="search_button_row">
                 <h5>Your Keywords: </h5>
             </div>
-
         </>
-
     );
 }
 

@@ -1,7 +1,12 @@
 import axios from "axios";
 
-export default {
+const RECIPEURL =
+  "https://www.food2fork.com/api/search?key=5d07a311a0f80b9d21312e7aad766dba&q=";
 
+export default {
+  searchRecipes: function(query) {
+    return axios.get(RECIPEURL + query);
+  },
   saveUser: function(userData) {
     console.log(userData)
     return axios.post("/api/users", userData)

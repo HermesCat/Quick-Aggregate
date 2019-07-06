@@ -25,7 +25,7 @@ function Header() {
                             <div className="row  button-list">
                                 <div className="col-12">
                                     <button>Login</button>
-                                    <button>Sign-Up</button>
+                                    <a href="/register"><button>Sign-Up</button></a>
                                 </div>
                             </div>
                             <Switch>

@@ -1,6 +1,11 @@
 import axios from "axios";
 
 export default {
+
+  saveUser: function(userData) {
+    console.log(userData)
+    return axios.post("/api/users", userData)
+  },
   // Gets all books
   getBooks: function() {
     return axios.get("/api/books");

@@ -18,7 +18,7 @@ function Header() {
                 </div>
                 <div className="col-4 navigation">
                     <div className="row">
-                        <a className="menu-icon d-lg-none "><img className="hamburger-icon" src={HamburgerIcon} /></a>
+                        <a className="d-lg-none "><img className="hamburger-icon" src={HamburgerIcon} /></a>
                         <Router>
                             <div>
                                 <Nav />

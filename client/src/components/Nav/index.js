@@ -10,6 +10,9 @@ function Nav() {
           <a className="nav-link" href="/">HOME</a>
         </li>
         <li className="nav-item">
+          <a className="nav-link" href="/register">REGISTER</a>
+        </li>
+        <li className="nav-item">
           <a className="nav-link" href="/">ABOUT</a>
         </li>
         <li className="nav-item">

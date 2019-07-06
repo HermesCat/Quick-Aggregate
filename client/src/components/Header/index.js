@@ -21,6 +21,12 @@ function Header() {
                     <Router>
                         <>
                             <Nav />
+                            <div className="row  button-list">
+                                <div className="col-12">
+                                    <button>Login</button>
+                                    <button>Sign-Up</button>
+                                </div>
+                            </div>
                             <Switch>
                                 <Route exact path="/" />
                                 <Route exact path="/" />
@@ -28,10 +34,6 @@ function Header() {
                             </Switch>
                         </>
                     </Router>
-                </div>
-                <div className="col-12 button-list">
-                    <button>Login</button>
-                    <button>Sign-Up</button>
                 </div>
             </div>
         </header>

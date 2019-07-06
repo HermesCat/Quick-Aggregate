@@ -27,6 +27,9 @@ function User_Input(props) {
                     </select>
                 </div>
             </div>
+            <div className="row search-button">
+                <button>Search</button>
+            </div>
         </>
 
 

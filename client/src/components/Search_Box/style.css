@@ -1,0 +1,13 @@
+.collapse{
+    margin: 0;
+}
+
+.btn-link{
+    text-decoration: none;
+    color: black;
+}
+
+.btn-link:hover, .btn-link:focus, .btn-link:visited {
+    text-decoration: none;
+    color: black;
+  }

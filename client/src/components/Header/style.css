@@ -44,3 +44,8 @@ header {
     position: absolute;
     left: 45px;
 }
+
+.navigation {
+    padding: 0;
+    overflow: hidden;
+}

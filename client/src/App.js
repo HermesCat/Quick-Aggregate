@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 // import Books from "./pages/Books";
 // import Detail from "./pages/Detail";
 // import NoMatch from "./pages/NoMatch";
@@ -8,7 +8,9 @@ import Header from "./components/Header";
 function App() {
   return (
     <>
-      <Header />
+      <Page_Wrapper>
+        <Header />
+      </Page_Wrapper>
     </>
   );
 }

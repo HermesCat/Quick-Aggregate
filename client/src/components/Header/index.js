@@ -4,6 +4,7 @@ import Nav from "../Nav";
 import "./style.css";
 import HamburgerIcon from "./img/hamburger_icon.png";
 
+// There are 2 versions of the header (small screen and desktop), remember this when creaating links and such
 
 
 
@@ -15,7 +16,7 @@ function Header() {
                 <div className="col-8">
                     <h1 className="main-title"><span className="highligher">Quick</span>Aggregate</h1>
                 </div>
-                <div className="col-4">
+                <div className="col-4 navigation">
                     <div className="row">
                         <a className="menu-icon d-lg-none "><img className="hamburger-icon" src={HamburgerIcon} /></a>
                         <Router>

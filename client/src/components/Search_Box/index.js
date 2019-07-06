@@ -40,7 +40,7 @@ function Search_Box() {
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card d-lg-none">
                 <div class="card-header" id="headingThree">
                     <h5 class="mb-0">
                         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">

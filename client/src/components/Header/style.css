@@ -34,7 +34,7 @@ header {
 }
 
 .button-list{
-    margin-right: 3rem;
+    margin: 0;
 }
 
 .hamburger-icon {
@@ -50,3 +50,15 @@ header {
     padding: 0;
     overflow: hidden;
 }
+
+@media only screen and (min-width: 600px) {
+    Header {
+      background: lightblue;
+      height: 8rem;
+    }
+    .main-title {
+        padding-top: .5rem;
+        margin-left: .5rem;
+        font-size: 2.8rem;
+    }
+  }

@@ -9,20 +9,20 @@ import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
-	return (
-		<Router>
-			<div>
-				<PageWrapper>
-					<Header />
-					<Switch>
-						<Route exact path="/" component={Home} />
+  return (
+    <Router>
+      <>
+        <PageWrapper>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
             <Route exact path="/register" component={Register} />
-					</Switch>
-				</PageWrapper>
-				<Footer />
-			</div>
-		</Router>
-	);
+          </Switch>
+        </PageWrapper>
+        <Footer />
+      </>
+    </Router>
+  );
 }
 
 export default App;

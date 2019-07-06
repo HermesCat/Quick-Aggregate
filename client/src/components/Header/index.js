@@ -13,29 +13,25 @@ function Header() {
 
         <header>
             <div className="row">
-                <div className="col-8">
+                <div className="col-6">
                     <h1 className="main-title"><span className="highligher">Quick</span>Aggregate</h1>
                 </div>
-                <div className="col-4 navigation">
-                    <div className="row">
-                        <a className="d-lg-none "><img className="hamburger-icon" src={HamburgerIcon} /></a>
-                        <Router>
-                            <div>
-                                <Nav />
-                                <Switch>
-                                    <Route exact path="/" />
-                                    <Route exact path="/" />
-                                    <Route exact path="/" />
-                                </Switch>
-                            </div>
-                        </Router>
-                    </div>
-                    <div className="row button-list d-none d-lg-block">
-                        <div className="col-12">
-                            <button>Login</button>
-                            <button>Sign-Up</button>
-                        </div>
-                    </div>
+                <div className="col-6 navigation">
+                    <a className="d-lg-none "><img className="hamburger-icon" src={HamburgerIcon} /></a>
+                    <Router>
+                        <>
+                            <Nav />
+                            <Switch>
+                                <Route exact path="/" />
+                                <Route exact path="/" />
+                                <Route exact path="/" />
+                            </Switch>
+                        </>
+                    </Router>
+                </div>
+                <div className="col-12 button-list">
+                    <button>Login</button>
+                    <button>Sign-Up</button>
                 </div>
             </div>
         </header>

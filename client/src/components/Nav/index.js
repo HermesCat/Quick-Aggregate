@@ -1,13 +1,25 @@
 import React from "react";
+import "./style.css";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
-        React Reading List
-      </a>
-    </nav>
+
+    <>
+      <ul className="nav justify-content-end d-lg-block">
+        <li className="nav-item">
+          <a className="nav-link" href="/">HOME</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/">ABOUT</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/">CONTACT</a>
+        </li>
+      </ul>
+    </>
+
   );
 }
 
 export default Nav;
+

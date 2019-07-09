@@ -1,0 +1,12 @@
+
+
+.nav-link {
+    text-decoration: none;
+    display: inline;
+    color: red;
+    font-size: 1.3rem;
+}
+
+.nav-item {
+    display: inline;
+}

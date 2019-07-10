@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import Formatted_Buttons from "../Formatted_Buttons"
 
 function User_Buttons(props) {
     return (
@@ -8,7 +9,8 @@ function User_Buttons(props) {
                 <p>Your saved searches are stored here as buttons.</p>
             </div>
             <div className="row" id="search_button_row">
-                <h5>Your Keywords: </h5>
+                <h4>Your Keywords: </h4>
+                <div className="row button_array"><Formatted_Buttons /></div>
             </div>
         </>
     );

@@ -4,11 +4,14 @@ import User_Buttons from "../components/User_Buttons";
 import SearchResultsRecipes from "../components/SearchResultsRecipes";
 import API from "../utils/API";
 import { InputValue, FormBtn } from "../components/SearchForm";
+import NewsSearch from "../components/NewsSearch";
 
 class Home extends Component {
   state = {
     search: "",
-    recipes: []
+    recipes: [],
+    news: [],
+    mediaSearch: ""
   };
 
   handleInputChange = event => {
@@ -20,6 +23,7 @@ class Home extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
 
+    if (this.state.mediaSearch === "3") {
     API.searchRecipes(this.state.search)
       .then(res => {
         console.log(res);
@@ -44,6 +48,32 @@ class Home extends Component {
       })
       .catch(err => console.log(err));
   };
+
+  if (this.state.mediaSearch === "1") {
+    API.searchNews(this.state.search)
+      .then(res => {
+        // console.log(res);
+        let articles = res.data.articles;
+        // console.log(articles);
+
+        articles = articles.map(article => {
+          article = {
+            // key: articles._id,
+            title: article.title,
+            caption: article.description,
+            image: article.urlToImage,
+            link: article.url
+          }
+        console.log(article.title);
+        return article;
+        })
+        this.setState({
+          news: articles
+        })
+      })
+      .catch(err => console.log(err));
+    };
+  }
 
   render() {
     return (
@@ -126,7 +156,7 @@ class Home extends Component {
                         Search-Type
                       </label>
                     </div>
-                    <select className="custom-select" id="inputGroupSelect01">
+                    <select className="custom-select" id="inputGroupSelect01" onChange={(e) => {this.setState({mediaSearch: e.target.value})}}>>
                       <option selected>Choose...</option>
                       <option value="1">News</option>
                       <option value="2">Twitter</option>
@@ -171,6 +201,7 @@ class Home extends Component {
                 >
                   <div class="card-body">
                     <SearchResultsRecipes recipes={this.state.recipes} />
+                    <NewsSearch news={this.state.news} />
                   </div>
                 </div>
               </div>

@@ -3,6 +3,9 @@ import axios from "axios";
 const RECIPEURL =
   "https://www.food2fork.com/api/search?key=5d07a311a0f80b9d21312e7aad766dba&q=";
 
+const newsURL = "https://newsapi.org/v2/everything?q=";
+const newsAPI = "&apiKey=f14386004b984aab9c45f6dcf17b377f";
+
 export default {
   searchRecipes: function(query) {
     return axios.get(RECIPEURL + query);
@@ -26,5 +29,8 @@ export default {
   // Saves a book to the database
   saveBook: function(bookData) {
     return axios.post("/api/books", bookData);
-  }
+  },
+  searchNews: function(query) {
+    return axios.get(newsURL + query + newsAPI);
+  },
 };

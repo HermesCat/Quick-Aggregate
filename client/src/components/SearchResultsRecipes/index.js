@@ -4,13 +4,7 @@ import { Row, Col } from "../Grid";
 
 const SearchResultsRecipes = props => {
   return props.recipes.length === 0 ? (
-    <div className="card">
-      <div className="card-body player">
-        <div className="article">
-          <h3>Search Results</h3>
-        </div>
-      </div>
-    </div>
+<div></div>
   ) : (
     <div className="card">
       <div className="card-body player">

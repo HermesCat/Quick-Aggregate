@@ -6,4 +6,7 @@ html, body, #root {
 
 body {
     background-image: linear-gradient(rgb(226, 225, 225), rgb(194, 193, 193));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 }

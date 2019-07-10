@@ -1,0 +1,26 @@
+.user-keyword {
+    border: none;
+    margin: 4px;
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    width: auto;
+    overflow: visible;
+    margin-left: 15px;
+}
+
+.recipe-buttons {
+    background-color: #2ECC40;
+}
+
+.news-buttons {
+    background-color: rgb(204, 194, 194);
+}
+
+.twitter-buttons {
+    background-color: #38A1F3;
+}
+
+.user-keyword:hover {
+    background-color: grey;
+}

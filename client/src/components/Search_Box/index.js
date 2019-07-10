@@ -4,24 +4,28 @@ import User_Buttons from "../User_Buttons";
 import "./style.css";
 import { Col, Row, Container } from "../Grid";
 import SearchResultsRecipes from "../SearchResultsRecipes";
+import NewsSearch from "../NewsSearch";
 import API from "../../utils/API";
 import { Input, FormBtn } from "../SearchForm";
 
 class Search_Box extends Component {
   state = {
     search: "",
-    recipes: []
+    recipes: [],
+    news: [],
+    mediaSearch: ""
   };
 
   handleInputChange = event => {
     this.setState({
-      search: event.target.value
+      search: event.target.value,
     });
   };
 
   handleFormSubmit = event => {
     event.preventDefault();
 
+    if (this.state.mediaSearch === "Recipes") {
     API.searchRecipes(this.state.search)
       .then(res => {
         console.log(res);
@@ -45,9 +49,36 @@ class Search_Box extends Component {
         });
       })
       .catch(err => console.log(err));
-  };
+    };
 
+// News Search API
+if (this.state.mediaSearch === "News") {
+    API.searchNews(this.state.search)
+      .then(res => {
+        // console.log(res);
+        let articles = res.data.articles;
+        // console.log(articles);
+
+        articles = articles.map(article => {
+          article = {
+            // key: articles._id,
+            title: article.title,
+            caption: article.description,
+            image: article.urlToImage,
+            link: article.url
+          }
+        console.log(article.title);
+        return article;
+        })
+        this.setState({
+          news: articles
+        })
+      })
+      .catch(err => console.log(err));
+  };
+  }
   render() {
+    console.log(this.state.mediaSearch);
     return (
       <div id="accordion">
         <div class="card" id="accordion1">
@@ -125,11 +156,13 @@ class Search_Box extends Component {
                         Search-Type
                       </label>
                     </div>
-                    <select class="custom-select" id="inputGroupSelect01">
+                    <select class="custom-select" id="inputGroupSelect01"
+                    value={this.state.value}
+                    onChange={(e) => {this.setState({mediaSearch: e.target.value})}}>
                       <option selected>Choose...</option>
-                      <option value="1">News</option>
-                      <option value="2">Twitter</option>
-                      <option value="3">Recipes</option>
+                      <option value="News">News</option>
+                      <option value="Twitter">Twitter</option>
+                      <option value="Recipes">Recipes</option>
                     </select>
                   </div>
                 </div>
@@ -164,6 +197,7 @@ class Search_Box extends Component {
           </div>
         </div>
         <SearchResultsRecipes recipes={this.state.recipes} />
+        <NewsSearch news={this.state.news} />
       </div>
     );
   }

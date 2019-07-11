@@ -12,15 +12,22 @@
 .recipe-buttons {
     background: var(--recipe-green);
 }
+.recipe-buttons:hover {
+    background: grey;
+}
 
 .news-buttons {
     background: var(--main-grey);
+}
+
+.news-buttons:hover {
+    background: grey;
 }
 
 .twitter-buttons {
     background: var(--twitter-blue);
 }
 
-.user-keyword:hover {
-    background-color: grey;
+.twitter-buttons:hover {
+    background: grey;
 }

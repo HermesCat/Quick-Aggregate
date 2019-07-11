@@ -1,6 +1,16 @@
 footer {
   min-height: 5%;
   overflow: auto;
-  background: #adbad4;
+  background: var(--main-white);
+  padding-top: 10px;
   text-align: center;
+  border-top: red solid .2rem;
+}
+
+.highligher_footer {
+  background-image: var(--highlighter-red);
+  padding: .2rem;
+  margin-left: 3rem;
+  border-radius: .5rem;
+  color: rgb(235, 228, 228);
 }

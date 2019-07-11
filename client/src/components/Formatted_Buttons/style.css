@@ -10,15 +10,15 @@
 }
 
 .recipe-buttons {
-    background-color: #2ECC40;
+    background: var(--recipe-green);
 }
 
 .news-buttons {
-    background-color: rgb(204, 194, 194);
+    background: var(--main-grey);
 }
 
 .twitter-buttons {
-    background-color: #38A1F3;
+    background: var(--twitter-blue);
 }
 
 .user-keyword:hover {

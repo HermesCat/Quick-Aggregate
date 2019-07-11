@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import "./colors.css";
 import Home from './pages/Home';
 import Register from './pages/Register'
 import PageWrapper from './components/Page-Wrapper';

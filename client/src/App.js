@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import "./colors.css";
 import Home from './pages/Home';
+import About from './pages/About';
 import Register from './pages/Register'
 import PageWrapper from './components/Page-Wrapper';
 import Header from './components/Header';
@@ -17,6 +18,7 @@ function App() {
           <Header />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
             <Route exact path="/register" component={Register} />
           </Switch>
         </PageWrapper>

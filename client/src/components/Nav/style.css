@@ -5,6 +5,12 @@
     display: inline;
     color: red;
     font-size: 1.3rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: grey;
 }
 
 .nav-item {

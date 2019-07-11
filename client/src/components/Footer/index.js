@@ -6,7 +6,7 @@ function Footer() {
 
         <>
             <footer>
-                <h5>Quick Aggregate</h5>
+                <h5><span className="highligher_footer">Quick</span>Aggregate</h5>
             </footer>
         </>
 

@@ -1,0 +1,8 @@
+.card {
+    background: var(--card-white);
+}
+
+.btn-search {
+  background-image: var(--highlighter-red);
+  color: white;
+}

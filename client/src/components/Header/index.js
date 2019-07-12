@@ -24,8 +24,8 @@ function Header() {
                             <Nav />
                             <div className="row  button-list">
                                 <div className="col-12">
-                                    <button>Login</button>
-                                    <a href="/register"><button>Sign-Up</button></a>
+                                    <button id="login">Login</button>
+                                    <a href="/register"><button id="sign-up">Sign-Up</button></a>
                                 </div>
                             </div>
                             <Switch>

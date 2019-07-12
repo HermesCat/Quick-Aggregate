@@ -29,7 +29,7 @@ class Home extends Component {
         console.log(res);
         let results = res.data.recipes;
 
-        results = results.map(result => {
+        results = results.slice(0, 10).map(result => {
           result = {
             key: result.recipe_id,
             id: result.recipe_id,
@@ -39,7 +39,7 @@ class Home extends Component {
             rank: result.social_rank,
             link: result.f2f_url
           };
-          console.log(result);
+          // console.log(result);
           return result;
         });
         this.setState({

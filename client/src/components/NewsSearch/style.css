@@ -1,0 +1,14 @@
+.articleImage {
+  height: 200px;
+  width: 200px;
+}
+
+.articleLink {
+  text-decoration: none;
+  color: #212529;
+}
+
+.articleLink:hover {
+  text-decoration: none;
+  color: #212529;
+}

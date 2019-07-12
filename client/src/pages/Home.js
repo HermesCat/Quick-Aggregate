@@ -22,8 +22,10 @@ class Home extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    
 
     if (this.state.mediaSearch === "3") {
+
     API.searchRecipes(this.state.search)
       .then(res => {
         console.log(res);
@@ -43,6 +45,7 @@ class Home extends Component {
           return result;
         });
         this.setState({
+          news: "",
           recipes: results
         });
       })
@@ -54,9 +57,9 @@ class Home extends Component {
       .then(res => {
         // console.log(res);
         let articles = res.data.articles;
-        // console.log(articles);
+        console.log(articles);
 
-        articles = articles.map(article => {
+        articles = articles.slice(0, 10).map(article => {
           article = {
             // key: articles._id,
             title: article.title,
@@ -68,6 +71,7 @@ class Home extends Component {
         return article;
         })
         this.setState({
+          recipes: "",  
           news: articles
         })
       })
@@ -199,7 +203,7 @@ class Home extends Component {
                   aria-labelledby="heading4"
                   data-parent="#accordion4"
                 >
-                  <div class="card-body">
+                  <div class="card-body" id="card-body-results">
                     <SearchResultsRecipes recipes={this.state.recipes} />
                     <NewsSearch news={this.state.news} />
                   </div>

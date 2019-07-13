@@ -27,10 +27,12 @@ export default {
     return axios.delete("/api/books/" + id);
   },
   // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/books", bookData);
+  saveSearch: function(searchData) {
+    console.log(searchData)
+    return axios.post("/api/search", searchData);
   },
   searchNews: function(query) {
     return axios.get(newsURL + query + newsAPI);
   },
+  //
 };

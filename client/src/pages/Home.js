@@ -11,12 +11,22 @@ class Home extends Component {
     search: "",
     recipes: [],
     news: [],
-    mediaSearch: ""
+    mediaSearch: "",
+    api: ""
   };
 
+  saveSearch = event => {    
+      API.saveSearch({
+        search: this.state.search,
+        api: this.state.api
+      })
+    
+  }
+
   handleInputChange = event => {
+    const { name, value } = event.target
     this.setState({
-      search: event.target.value
+      [name]: value
     });
   };
 
@@ -25,7 +35,7 @@ class Home extends Component {
     
 
     if (this.state.mediaSearch === "3") {
-
+    
     API.searchRecipes(this.state.search)
       .then(res => {
         console.log(res);
@@ -73,7 +83,11 @@ class Home extends Component {
         this.setState({
           recipes: "",  
           news: articles
-        })
+        })        
+        this.saveSearch(
+          this.state.search[0]
+        );
+      
       })
       .catch(err => console.log(err));
     };
@@ -162,23 +176,23 @@ class Home extends Component {
                     </div>
                     <select className="custom-select" id="inputGroupSelect01" onChange={(e) => {this.setState({mediaSearch: e.target.value})}}>>
                       <option selected>Choose...</option>
-                      <option value="1">News</option>
-                      <option value="2">Twitter</option>
-                      <option value="3">Recipes</option>
+                      <option value="1" name="api">News</option>
+                      <option value="2" name="api">Twitter</option>
+                      <option value="3" name="api">Recipes</option>
                     </select>
                   </div>
                 </div>
+                <div class="form-check">
+                  <input type="checkbox" className="form-check-input" id="checkBox" />
+                  <label className="form-check-label" for="exampleCheck1">Remember Search</label>
+               </div>
                 <FormBtn onClick={(event) => this.handleFormSubmit(event)}>Search</FormBtn>
               </form>
             </div>
           </div>
-        </div>
-        
-      </div>
-            
-              
-            
-            
+        </div>        
+      </div>     
+                                 
           </div>
           <div className="col-lg-7 d-none d-lg-block">
             <div id="accordion">

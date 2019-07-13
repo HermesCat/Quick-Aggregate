@@ -6,14 +6,14 @@ function About_Modal() {
 
         <>
             <div className="row">
-                <div type="button" className="modal-image" data-toggle="modal" data-target="#exampleModal">
-                    Launch demo modal
+                <div type="button" className="modal-image about1" data-toggle="modal" data-target="#exampleModal">
+                    About Quick Aggregate
             </div>
-                <div type="button" className="modal-image" data-toggle="modal" data-target="#exampleModal">
-                    Launch demo modal
+                <div type="button" className="modal-image about2" data-toggle="modal" data-target="#exampleModal">
+                    Your Keywords
             </div>
-                <div type="button" className="modal-image" data-toggle="modal" data-target="#exampleModal">
-                    Launch demo modal
+                <div type="button" className="modal-image about3" data-toggle="modal" data-target="#exampleModal">
+                    Our APIs
             </div>
             </div>
 

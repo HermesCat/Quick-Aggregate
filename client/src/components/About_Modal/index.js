@@ -6,15 +6,21 @@ function About_Modal() {
 
         <>
             <div className="row">
-                <div type="button" className="modal-image about1" data-toggle="modal" data-target="#exampleModal">
-                    About Quick Aggregate
-            </div>
-                <div type="button" className="modal-image about2" data-toggle="modal" data-target="#exampleModal">
-                    Your Keywords
-            </div>
-                <div type="button" className="modal-image about3" data-toggle="modal" data-target="#exampleModal">
-                    Our APIs
-            </div>
+                <div type="card" className="modal-image about1" data-toggle="modal" data-target="#exampleModal">
+                    <div className=" wrapper image-hover">
+                        <h4 className="modal-image-stripe">About Quick Aggregate</h4>
+                    </div>
+                </div>
+                <div type="card" className="modal-image about2" data-toggle="modal" data-target="#exampleModal">
+                    <div className=" wrapper image-hover">
+                        <h4 className="modal-image-stripe">Your Keywords</h4>
+                    </div>
+                </div>
+                <div type="card" className="modal-image about3" data-toggle="modal" data-target="#exampleModal">
+                    <div className=" wrapper image-hover">
+                        <h4 className="modal-image-stripe">Our APIs</h4>
+                    </div>
+                </div>
             </div>
 
             <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

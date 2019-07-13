@@ -6,6 +6,7 @@ import API from "../utils/API";
 import { InputValue, FormBtn } from "../components/SearchForm";
 import NewsSearch from "../components/NewsSearch";
 
+
 class Home extends Component {
   state = {
     search: "",
@@ -15,12 +16,11 @@ class Home extends Component {
     api: ""
   };
 
-  saveSearch = event => {    
-      API.saveSearch({
-        search: this.state.search,
-        api: this.state.api
-      })
-    
+  saveSearch = event => {
+    API.saveSearch({
+      search:this.state.search,
+      api: this.state.mediaSearch
+    })
   }
 
   handleInputChange = event => {
@@ -34,7 +34,7 @@ class Home extends Component {
     event.preventDefault();
     
 
-    if (this.state.mediaSearch === "3") {
+    if (this.state.mediaSearch === "Recipes") {
     
     API.searchRecipes(this.state.search)
       .then(res => {
@@ -58,11 +58,15 @@ class Home extends Component {
           news: "",
           recipes: results
         });
+        let checkbox = document.getElementById('checkBox');
+        if(checkbox.checked === true){
+          this.saveSearch()
+        };
       })
       .catch(err => console.log(err));
   };
 
-  if (this.state.mediaSearch === "1") {
+  if (this.state.mediaSearch === "News") {
     API.searchNews(this.state.search)
       .then(res => {
         // console.log(res);
@@ -84,9 +88,11 @@ class Home extends Component {
           recipes: "",  
           news: articles
         })        
-        this.saveSearch(
-          this.state.search[0]
-        );
+        let checkbox = document.getElementById('checkBox');
+        console.log(checkbox.value)
+        if(checkbox.checked === true){
+          this.saveSearch()
+        };      
       
       })
       .catch(err => console.log(err));
@@ -176,13 +182,13 @@ class Home extends Component {
                     </div>
                     <select className="custom-select" id="inputGroupSelect01" onChange={(e) => {this.setState({mediaSearch: e.target.value})}}>>
                       <option selected>Choose...</option>
-                      <option value="1" name="api">News</option>
-                      <option value="2" name="api">Twitter</option>
-                      <option value="3" name="api">Recipes</option>
+                      <option value="News">News</option>
+                      <option value="Twitter">Twitter</option>
+                      <option value="Recipes">Recipes</option>
                     </select>
                   </div>
                 </div>
-                <div class="form-check">
+                <div className="form-check">
                   <input type="checkbox" className="form-check-input" id="checkBox" />
                   <label className="form-check-label" for="exampleCheck1">Remember Search</label>
                </div>
@@ -196,11 +202,11 @@ class Home extends Component {
           </div>
           <div className="col-lg-7 d-none d-lg-block">
             <div id="accordion">
-              <div class="card" id="accordion4">
-                <div class="card-header" id="heading4">
-                  <h5 class="mb-0">
+              <div className="card" id="accordion4">
+                <div className="card-header" id="heading4">
+                  <h5 className="mb-0">
                     <button
-                      class="btn btn-link"
+                      className="btn btn-link"
                       data-toggle="collapse"
                       data-target="#collapse4"
                       aria-expanded="true"
@@ -213,11 +219,11 @@ class Home extends Component {
 
                 <div
                   id="collapse4"
-                  class="collapse show"
+                  className="collapse show"
                   aria-labelledby="heading4"
                   data-parent="#accordion4"
                 >
-                  <div class="card-body" id="card-body-results">
+                  <div className="card-body" id="card-body-results">
                     <SearchResultsRecipes recipes={this.state.recipes} />
                     <NewsSearch news={this.state.news} />
                   </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Formatted_Buttons() {
+function Formatted_Buttons(props) {
     return (
         <>
             <button className="user-keyword recipe-buttons">

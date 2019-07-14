@@ -18,7 +18,7 @@ function About_Modal() {
                 </div>
                 <div type="card" className="modal-image about3" data-toggle="modal" data-target="#modal3">
                     <div className=" wrapper image-hover">
-                        <h4 className="modal-image-stripe">Our</h4>
+                        <h4 className="modal-image-stripe">Our APIs</h4>
                     </div>
                 </div>
             </div>

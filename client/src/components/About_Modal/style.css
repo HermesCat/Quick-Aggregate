@@ -57,3 +57,17 @@
     background-color: grey;
     opacity: .8;
 }
+
+.main-title-modal {
+    padding-top: .5rem;
+    margin-left: .8rem;
+    font-size: 2rem;
+}
+
+.highligher-modal{
+    background-image: var(--highlighter-red);
+    padding: .5rem;
+    margin-left: 3rem;
+    border-radius: .5rem;
+    color: rgb(235, 228, 228);
+}

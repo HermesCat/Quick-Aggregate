@@ -19,7 +19,7 @@ class Home extends Component {
 
   saveSearch = event => {
     API.saveSearch({
-      search:this.state.search,
+      search: this.state.search,
       api: this.state.mediaSearch
     })
   }
@@ -33,70 +33,70 @@ class Home extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    
+
 
     if (this.state.mediaSearch === "Recipes") {
-    
-    API.searchRecipes(this.state.search)
-      .then(res => {
-        console.log(res);
-        let results = res.data.recipes;
 
-        results = results.slice(0, 10).map(result => {
-          result = {
-            key: result.recipe_id,
-            id: result.recipe_id,
-            title: result.title,
-            publisher: result.publisher,
-            image: result.image_url,
-            rank: result.social_rank,
-            link: result.f2f_url
+      API.searchRecipes(this.state.search)
+        .then(res => {
+          console.log(res);
+          let results = res.data.recipes;
+
+          results = results.slice(0, 10).map(result => {
+            result = {
+              key: result.recipe_id,
+              id: result.recipe_id,
+              title: result.title,
+              publisher: result.publisher,
+              image: result.image_url,
+              rank: result.social_rank,
+              link: result.f2f_url
+            };
+            // console.log(result);
+            return result;
+          });
+          this.setState({
+            news: "",
+            recipes: results
+          });
+          let checkbox = document.getElementById('checkBox');
+          if (checkbox.checked === true) {
+            this.saveSearch()
           };
-          // console.log(result);
-          return result;
-        });
-        this.setState({
-          news: "",
-          recipes: results
-        });
-        let checkbox = document.getElementById('checkBox');
-        if(checkbox.checked === true){
-          this.saveSearch()
-        };
-      })
-      .catch(err => console.log(err));
-  };
-
-  if (this.state.mediaSearch === "News") {
-    API.searchNews(this.state.search)
-      .then(res => {
-        // console.log(res);
-        let articles = res.data.articles;
-        console.log(articles);
-
-        articles = articles.slice(0, 10).map(article => {
-          article = {
-            // key: articles._id,
-            title: article.title,
-            caption: article.description,
-            image: article.urlToImage,
-            link: article.url
-          }
-        console.log(article.title);
-        return article;
         })
-        this.setState({
-          recipes: "",  
-          news: articles
-        })        
-        let checkbox = document.getElementById('checkBox');
-        console.log(checkbox.value)
-        if(checkbox.checked === true){
-          this.saveSearch()
-        };      
-      
-      })
-      .catch(err => console.log(err));
+        .catch(err => console.log(err));
+    };
+
+    if (this.state.mediaSearch === "News") {
+      API.searchNews(this.state.search)
+        .then(res => {
+          // console.log(res);
+          let articles = res.data.articles;
+          console.log(articles);
+
+          articles = articles.slice(0, 10).map(article => {
+            article = {
+              // key: articles._id,
+              title: article.title,
+              caption: article.description,
+              image: article.urlToImage,
+              link: article.url
+            }
+            console.log(article.title);
+            return article;
+          })
+          this.setState({
+            recipes: "",
+            news: articles
+          })
+          let checkbox = document.getElementById('checkBox');
+          console.log(checkbox.value)
+          if (checkbox.checked === true) {
+            this.saveSearch()
+          };
+
+        })
+        .catch(err => console.log(err));
     };
     if (this.state.mediaSearch === "Twitter") {
       API.searchTwitter(this.state.search)
@@ -137,101 +137,101 @@ class Home extends Component {
       <>
         <div className="row home-content-row">
           <div className="col-lg-5 col-s-12">
-          <div id="accordion">
-        <div className="card" id="accordion1">
-          <div className="card-header" id="headingOne">
-            <h5 className="mb-0">
-              <button
-                className="btn btn-link"
-                data-toggle="collapse"
-                data-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                <div className="row">
-                  <h3>My Searches</h3>
+            <div id="accordion">
+              <div className="card" id="accordion1">
+                <div className="card-header" id="headingOne">
+                  <h5 className="mb-0">
+                    <button
+                      className="btn btn-link"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <div className="row">
+                        <h3>My Searches</h3>
+                      </div>
+                    </button>
+                  </h5>
                 </div>
-              </button>
-            </h5>
-          </div>
-          <div
-            id="collapseOne"
-            className="collapse show"
-            aria-labelledby="headingOne"
-            data-parent="#accordion1"
-          >
-            <div className="card-body">
-              <User_Buttons />
-            </div>
-          </div>
-        </div>
-        <div className="card" id="accordion2">
-          <div className="card-header" id="headingTwo">
-            <h5 className="mb-0">
-              <button
-                className="btn btn-link"
-                data-toggle="collapse"
-                data-target="#collapseTwo"
-                aria-expanded="true"
-                aria-controls="collapseTwo"
-              >
-                <div className="row">
-                  <h3>New Search</h3>
+                <div
+                  id="collapseOne"
+                  className="collapse show"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordion1"
+                >
+                  <div className="card-body">
+                    <User_Buttons />
+                  </div>
                 </div>
-              </button>
-            </h5>
-          </div>
-          <div
-            id="collapseTwo"
-            className="collapse show"
-            aria-labelledby="headingTwo"
-            data-parent="#accordion2"
-          >
-            <div className="card-body">
-              <form>
-                <div className="row">
-                  <div className="input-group mb-3">
-                    <div className="input-group-prepend">
-                      <span
-                        className="input-group-text"
-                        id="inputGroup-sizing-default"
-                      >
-                        Keyword
+              </div>
+              <div className="card" id="accordion2">
+                <div className="card-header" id="headingTwo">
+                  <h5 className="mb-0">
+                    <button
+                      className="btn btn-link"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="true"
+                      aria-controls="collapseTwo"
+                    >
+                      <div className="row">
+                        <h3>New Search</h3>
+                      </div>
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseTwo"
+                  className="collapse show"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordion2"
+                >
+                  <div className="card-body">
+                    <form>
+                      <div className="row">
+                        <div className="input-group mb-3">
+                          <div className="input-group-prepend">
+                            <span
+                              className="input-group-text"
+                              id="inputGroup-sizing-default"
+                            >
+                              Keyword
                       </span>
-                    </div>
-                    <InputValue
-                value={this.search}
-                onChange={this.handleInputChange}
-                name="search"
-              />
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="input-group mb-3">
-                    <div className="input-group-prepend">
-                      <label className="input-group-text" for="inputGroupSelect01">
-                        Search-Type
+                          </div>
+                          <InputValue
+                            value={this.search}
+                            onChange={this.handleInputChange}
+                            name="search"
+                          />
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="input-group mb-3">
+                          <div className="input-group-prepend">
+                            <label className="input-group-text" for="inputGroupSelect01">
+                              Search-Type
                       </label>
-                    </div>
-                    <select className="custom-select" id="inputGroupSelect01" onChange={(e) => {this.setState({mediaSearch: e.target.value})}}>>
+                          </div>
+                          <select className="custom-select" id="inputGroupSelect01" onChange={(e) => { this.setState({ mediaSearch: e.target.value }) }}>>
                       <option selected>Choose...</option>
-                      <option value="News">News</option>
-                      <option value="Twitter">Twitter</option>
-                      <option value="Recipes">Recipes</option>
-                    </select>
+                            <option value="News">News</option>
+                            <option value="Twitter">Twitter</option>
+                            <option value="Recipes">Recipes</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div className="form-check ">
+                        <input type="checkbox" className="form-check-input" id="checkBox" />
+                        <label className="form-check-label" for="exampleCheck1">Remember Search</label>
+                      </div>
+                      <FormBtn onClick={(event) => this.handleFormSubmit(event)}>Search</FormBtn>
+                    </form>
                   </div>
                 </div>
-                <div className="form-check">
-                  <input type="checkbox" className="form-check-input" id="checkBox" />
-                  <label className="form-check-label" for="exampleCheck1">Remember Search</label>
-               </div>
-                <FormBtn onClick={(event) => this.handleFormSubmit(event)}>Search</FormBtn>
-              </form>
+              </div>
             </div>
-          </div>
-        </div>        
-      </div>     
-                                 
+
           </div>
           <div className="col-lg-7 d-none d-lg-block">
             <div id="accordion">

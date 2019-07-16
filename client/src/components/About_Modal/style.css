@@ -1,0 +1,73 @@
+
+.about1 {
+    background-image: url(./img/qa_computer.jpg);
+    background-repeat: no-repeat;
+    background-size: 35rem;
+    background-position-x: -7.5rem;
+    background-position-y: -2rem;
+}
+
+.about2 {
+    background-image: url(./img/magazines.jpeg);
+    background-repeat: no-repeat;
+    background-size: 33rem;
+}
+
+.about3 {
+    background-image: url(./img/api_fist.jpg);
+    background-repeat: no-repeat;
+    background-size: 33rem;
+    background-position-x: -8.4rem;
+    background-position-y: -2rem;
+}
+
+.modal-image {
+    text-decoration: none;
+    border: none;
+    width: 19.5rem;
+    height: 19.5rem;
+    margin: 2rem;
+    border-radius: 1em;
+}
+
+.modal-image:hover {
+    cursor: pointer;
+}
+
+.modal-image-stripe {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: rgb(241, 237, 237);
+    text-align: center;
+    background: var(--highlighter-red);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 15.5rem;
+}
+
+.image-hover {
+    margin: 0;
+    width: 19.5rem;
+    height: 19.5rem;
+    border-radius: 1em;
+  
+}
+
+.image-hover:hover {
+    background-color: grey;
+    opacity: .8;
+}
+
+.main-title-modal {
+    padding-top: .5rem;
+    margin-left: .8rem;
+    font-size: 2rem;
+}
+
+.highligher-modal{
+    background-image: var(--highlighter-red);
+    padding: .5rem;
+    margin-left: 3rem;
+    border-radius: .5rem;
+    color: rgb(235, 228, 228);
+}

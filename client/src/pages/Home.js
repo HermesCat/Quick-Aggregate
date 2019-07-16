@@ -5,6 +5,7 @@ import SearchResultsRecipes from "../components/SearchResultsRecipes";
 import API from "../utils/API";
 import { InputValue, FormBtn } from "../components/SearchForm";
 import NewsSearch from "../components/NewsSearch";
+import TwitterSearch from "../components/TwitterSearch"
 
 
 class Home extends Component {
@@ -12,6 +13,7 @@ class Home extends Component {
     search: "",
     recipes: [],
     news: [],
+    tweets: [],
     mediaSearch: "",
     api: ""
   };
@@ -56,6 +58,7 @@ class Home extends Component {
           });
           this.setState({
             news: "",
+            tweets: "",
             recipes: results
           });
           let checkbox = document.getElementById('checkBox');
@@ -86,6 +89,7 @@ class Home extends Component {
           })
           this.setState({
             recipes: "",
+            tweets: "",
             news: articles
           })
           let checkbox = document.getElementById('checkBox');
@@ -97,6 +101,38 @@ class Home extends Component {
         })
         .catch(err => console.log(err));
     };
+    if (this.state.mediaSearch === "Twitter") {
+      API.searchTwitter(this.state.search)
+        .then(res => {
+          console.log(res);
+          let tweets = res.data;
+          console.log(tweets);
+  
+          tweets = tweets.slice(0, 10).map(tweet => {
+            tweet = {
+              key: tweets._id,
+              name: tweet.user.name,
+              text: tweet.full_text,
+              image: tweet.profile_image_url,
+              link: tweet.source
+            }
+          console.log(tweet);
+          return tweet;
+          })
+          this.setState({
+            recipes: "",  
+            news: "",
+            tweets: tweets
+          })        
+          let checkbox = document.getElementById('checkBox');
+          console.log(checkbox.value)
+          if(checkbox.checked === true){
+            this.saveSearch()
+          };      
+        
+        })
+        .catch(err => console.log(err));
+      };
   }
 
   render() {
@@ -226,6 +262,7 @@ class Home extends Component {
                   <div className="card-body" id="card-body-results">
                     <SearchResultsRecipes recipes={this.state.recipes} />
                     <NewsSearch news={this.state.news} />
+                    <TwitterSearch tweets={this.state.tweets} />
                   </div>
                 </div>
               </div>

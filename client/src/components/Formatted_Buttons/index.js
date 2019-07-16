@@ -5,31 +5,31 @@ function Formatted_Buttons(props) {
     return (
         <>
             <button className="user-keyword recipe-buttons">
-                keish
+                keish <a href="#" className="button-delete">x</a>
             </button>
             <button className="user-keyword news-buttons">
-                democratic party
+                democratic party<a href="#" className="button-delete">x</a>
             </button>
             <button className="user-keyword twitter-buttons">
-                #bacon
+                #bacon<a href="#" className="button-delete">x</a>
             </button>
             <button className="user-keyword twitter-buttons">
-                #Missy_Elliot
+                #Missy_Elliot<a href="#" className="button-delete">x</a>
             </button>
             <button className="user-keyword news-buttons">
-                Election 2020
+                Election 2020<a href="#" className="button-delete">x</a>
             </button>
             <button className="user-keyword recipe-buttons">
-                vegan cheese
+                vegan cheese<a href="#" className="button-delete">x</a>
             </button>
             <button className="user-keyword recipe-buttons">
-                fried rice
+                fried rice<a href="#" className="button-delete">x</a>
             </button>
             <button className="user-keyword twitter-buttons">
-                #japan
+                #japan<a href="#" className="button-delete">x</a>
             </button>
             <button className="user-keyword twitter-buttons">
-                #richmond
+                #richmond<a href="#" className="button-delete">x</a>
             </button>
         </>
     );

@@ -27,7 +27,7 @@ export default {
     return axios.get(RECIPEURL + query);
   },
   searchTwitter: function(query) {
-    return axios.get(query)
+    return axios.get("/api/search/tweets?search=" + query);
   },
   //saving users to mongo
   saveUser: function(userData) {

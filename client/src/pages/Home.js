@@ -5,6 +5,7 @@ import SearchResultsRecipes from "../components/SearchResultsRecipes";
 import API from "../utils/API";
 import { InputValue, FormBtn } from "../components/SearchForm";
 import NewsSearch from "../components/NewsSearch";
+import TwitterSearch from "../components/TwitterSearch"
 
 
 class Home extends Component {
@@ -57,6 +58,7 @@ class Home extends Component {
           });
           this.setState({
             news: "",
+            tweets: "",
             recipes: results
           });
           let checkbox = document.getElementById('checkBox');
@@ -87,6 +89,7 @@ class Home extends Component {
           })
           this.setState({
             recipes: "",
+            tweets: "",
             news: articles
           })
           let checkbox = document.getElementById('checkBox');
@@ -101,20 +104,20 @@ class Home extends Component {
     if (this.state.mediaSearch === "Twitter") {
       API.searchTwitter(this.state.search)
         .then(res => {
-          // console.log(res);
-          let tweets = res.data.tweets;
+          console.log(res);
+          let tweets = res.data;
           console.log(tweets);
   
           tweets = tweets.slice(0, 10).map(tweet => {
             tweet = {
-              // key: tweets._id,
+              key: tweets._id,
               name: tweet.user.name,
               text: tweet.full_text,
               image: tweet.profile_image_url,
               link: tweet.source
             }
-          console.log(tweet.name);
-          return tweets;
+          console.log(tweet);
+          return tweet;
           })
           this.setState({
             recipes: "",  
@@ -259,6 +262,7 @@ class Home extends Component {
                   <div className="card-body" id="card-body-results">
                     <SearchResultsRecipes recipes={this.state.recipes} />
                     <NewsSearch news={this.state.news} />
+                    <TwitterSearch tweets={this.state.tweets} />
                   </div>
                 </div>
               </div>

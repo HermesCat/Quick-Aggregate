@@ -113,8 +113,11 @@ class Home extends Component {
               key: tweets._id,
               name: tweet.user.name,
               text: tweet.full_text,
-              image: tweet.profile_image_url,
-              link: tweet.source
+              image: tweet.user.profile_image_url,
+              link: tweet.source,
+              id: tweet.id_str,
+              user: tweet.user.id_str,
+              screenName: tweet.user.screen_name
             }
           console.log(tweet);
           return tweet;

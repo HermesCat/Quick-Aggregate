@@ -22,8 +22,14 @@ class Home extends Component {
   componentDidMount(){
     API.getSearch()
     .then(res => this.setState({ searchButtons: res.data }))       
-    .catch(err => console.log(err));
-    
+    .catch(err => console.log(err));    
+  }
+
+  saveSearch = event => {
+    API.saveSearch({
+      search:this.state.search,
+      api: this.state.mediaSearch
+    })
   }
 
   // buttonAppend = event => {
@@ -94,18 +100,16 @@ class Home extends Component {
             }
             console.log(article.title);
             return article;
-          })
+          });
           this.setState({
             recipes: "",
             tweets: "",
             news: articles
-          })
+          });
           let checkbox = document.getElementById('checkBox');
-          console.log(checkbox.value)
-          if (checkbox.checked === true) {
-            this.saveSearch()
+          if (checkbox.checked === true) {            
+            this.saveSearch()      
           };
-
         })
         .catch(err => console.log(err));
     };

@@ -6,12 +6,15 @@ import API from "../utils/API";
 import { InputValue, FormBtn } from "../components/SearchForm";
 import NewsSearch from "../components/NewsSearch";
 import Formatted_Buttons from "../components/Formatted_Buttons";
+import TwitterSearch from "../components/TwitterSearch"
+
 
 class Home extends Component {
   state = {
     search: "",
     recipes: [],
     news: [],
+    tweets: [],
     mediaSearch: "",
     searchButtons: []
   };
@@ -63,6 +66,7 @@ class Home extends Component {
           });
           this.setState({
             news: "",
+            tweets: "",
             recipes: results
           });
           let checkbox = document.getElementById('checkBox');
@@ -93,6 +97,7 @@ class Home extends Component {
           })
           this.setState({
             recipes: "",
+            tweets: "",
             news: articles
           })
           let checkbox = document.getElementById('checkBox');
@@ -104,6 +109,41 @@ class Home extends Component {
         })
         .catch(err => console.log(err));
     };
+    if (this.state.mediaSearch === "Twitter") {
+      API.searchTwitter(this.state.search)
+        .then(res => {
+          console.log(res);
+          let tweets = res.data;
+          console.log(tweets);
+  
+          tweets = tweets.slice(0, 10).map(tweet => {
+            tweet = {
+              key: tweets._id,
+              name: tweet.user.name,
+              text: tweet.full_text,
+              image: tweet.user.profile_image_url,
+              link: tweet.source,
+              id: tweet.id_str,
+              user: tweet.user.id_str,
+              screenName: tweet.user.screen_name
+            }
+          console.log(tweet);
+          return tweet;
+          })
+          this.setState({
+            recipes: "",  
+            news: "",
+            tweets: tweets
+          })        
+          let checkbox = document.getElementById('checkBox');
+          console.log(checkbox.value)
+          if(checkbox.checked === true){
+            this.saveSearch()
+          };      
+        
+        })
+        .catch(err => console.log(err));
+      };
   }
 
   render() {
@@ -241,6 +281,7 @@ class Home extends Component {
                   <div className="card-body" id="card-body-results">
                     <SearchResultsRecipes recipes={this.state.recipes} />
                     <NewsSearch news={this.state.news} />
+                    <TwitterSearch tweets={this.state.tweets} />
                   </div>
                 </div>
               </div>

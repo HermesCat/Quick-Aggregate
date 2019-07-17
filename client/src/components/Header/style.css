@@ -58,6 +58,7 @@ header {
 
 .button-list{
     margin: 0;
+    padding-left: 8rem;
 }
 
 .hamburger-icon {

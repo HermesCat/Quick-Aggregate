@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col } from "../Grid";
+import "./style.css"
 
 const newsArticles = props => {
   return props.news.length === 0 ? (
@@ -11,13 +12,14 @@ const newsArticles = props => {
           console.log(props);
           return (
             <li className="search-list list-group-item">
+              <a href={article.link} className="articleLink" target="_blank"> 
               <Row
                 className="SearchResult row"
                 id={article.title + "Card"}
                 key={article.id}
               >
-                <Col size="2" className="articleImage">
-                  <img src={article.image} alt={article.title} />
+                <Col size="2">
+                  <img className="articleImage" src={article.image} alt={article.title} />
                 </Col>
                 <Col size="2" className="emptyCol" />
                 <Col size="8" className="articleInfo">
@@ -25,14 +27,12 @@ const newsArticles = props => {
                     <h3 className="articleTitle">{article.title}</h3>
                   </Row>
                   <Row>
-                    <h4 className="articleCaption">{article.caption}</h4>
+                    <p className="articleCaption">{article.caption}</p>
                   </Row>
-                  <Row>
-                    <p className="articleLink">{article.link}</p>
-                  </Row>
+                 
                 </Col>
               </Row>
-              <br />
+              </a>
             </li>
           );
         })}

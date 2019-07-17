@@ -1,6 +1,8 @@
-import React from "react";
+import React, {Component} from "react";
 import "./style.css";
-import Formatted_Buttons from "../Formatted_Buttons"
+import Formatted_Buttons from '../Formatted_Buttons'
+
+
 
 function User_Buttons(props) {
     return (
@@ -10,7 +12,9 @@ function User_Buttons(props) {
             </div>
             <div className="row" id="search_button_row">
                 <h4>Your Keywords: </h4>
-                <div className="row button_array"><Formatted_Buttons /></div>
+                <div className="row button_array">
+                    {props.children}
+                </div>
             </div>
         </>
     );

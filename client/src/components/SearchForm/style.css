@@ -3,6 +3,12 @@
 }
 
 .btn-search {
+  text-decoration: none;
   background-image: var(--highlighter-red);
+  color: white;
+}
+
+.btn-search:hover {
+  background: grey;
   color: white;
 }

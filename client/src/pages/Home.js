@@ -5,7 +5,7 @@ import SearchResultsRecipes from "../components/SearchResultsRecipes";
 import API from "../utils/API";
 import { InputValue, FormBtn } from "../components/SearchForm";
 import NewsSearch from "../components/NewsSearch";
-
+import Formatted_Buttons from "../components/Formatted_Buttons";
 
 class Home extends Component {
   state = {
@@ -13,15 +13,22 @@ class Home extends Component {
     recipes: [],
     news: [],
     mediaSearch: "",
-    api: ""
+    searchButtons: []
   };
 
-  saveSearch = event => {
-    API.saveSearch({
-      search: this.state.search,
-      api: this.state.mediaSearch
-    })
+  componentDidMount(){
+    API.getSearch()
+    .then(res => this.setState({ searchButtons: res.data }))       
+    .catch(err => console.log(err));
+    
   }
+
+  // buttonAppend = event => {
+  //   API.getSearch({
+  //     search: this.state.search,
+  //     api: this.state.mediaSearch
+  //   })
+  // }
 
   handleInputChange = event => {
     const { name, value } = event.target
@@ -59,8 +66,8 @@ class Home extends Component {
             recipes: results
           });
           let checkbox = document.getElementById('checkBox');
-          if (checkbox.checked === true) {
-            this.saveSearch()
+          if (checkbox.checked === true) {            
+            this.saveSearch()            
           };
         })
         .catch(err => console.log(err));
@@ -128,7 +135,15 @@ class Home extends Component {
                   data-parent="#accordion1"
                 >
                   <div className="card-body">
-                    <User_Buttons />
+                    <User_Buttons> 
+                      {this.state.searchButtons.map(call =>
+                        <Formatted_Buttons 
+                        id={call.id}
+                        key={call.id}
+                        search={call.search}
+                        api={call.mediaSearch}
+                        />)}
+                    </User_Buttons>
                   </div>
                 </div>
               </div>

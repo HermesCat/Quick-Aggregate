@@ -24,9 +24,9 @@ function About_Modal() {
             </div>
 
             <div className="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1" aria-hidden="true">
-                <div className="modal-dialog" role="document">
+                <div className="modal-dialog about-modal-size" role="document">
                     <div className="modal-content">
-                        <div className="modal-header">
+                        <div className="modal-header modal-header-about">
                             <h5 className="modal-title main-title-modal" id="exampleModalLabel"><span className="highligher-modal">Quick</span>Aggregate</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -34,8 +34,8 @@ function About_Modal() {
                         </div>
                         <div className="modal-body">
                             1
-      </div>
-                        <div className="modal-footer">
+                        </div>
+                        <div className="modal-footer modal-footer-about">
                             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -43,9 +43,9 @@ function About_Modal() {
             </div>
 
             <div className="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2" aria-hidden="true">
-                <div className="modal-dialog" role="document">
+                <div className="modal-dialog about-modal-size" role="document">
                     <div className="modal-content">
-                        <div className="modal-header">
+                        <div className="modal-header modal-header-about">
                             <h5 className="modal-title main-title-modal" id="exampleModalLabel"><span className="highligher-modal">Quick</span>Aggregate</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -54,7 +54,7 @@ function About_Modal() {
                         <div className="modal-body">
                             2
       </div>
-                        <div className="modal-footer">
+                        <div className="modal-footer modal-footer-about">
                             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -62,9 +62,9 @@ function About_Modal() {
             </div>
 
             <div className="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3" aria-hidden="true">
-                <div className="modal-dialog" role="document">
+                <div className="modal-dialog about-modal-size" role="document">
                     <div className="modal-content">
-                        <div className="modal-header">
+                        <div className="modal-header modal-header-about">
                             <h5 className="modal-title main-title-modal" id="exampleModalLabel"><span className="highligher-modal">Quick</span>Aggregate</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -73,7 +73,7 @@ function About_Modal() {
                         <div className="modal-body">
                             3
       </div>
-                        <div className="modal-footer">
+                        <div className="modal-footer modal-footer-about">
                             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>

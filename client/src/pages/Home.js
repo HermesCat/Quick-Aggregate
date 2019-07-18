@@ -19,17 +19,23 @@ class Home extends Component {
     searchButtons: []
   };
 
-  componentDidMount(){
+  fetchButtons() {
     API.getSearch()
-    .then(res => this.setState({ searchButtons: res.data }))       
-    .catch(err => console.log(err));    
-  }
+    .then(res => this.setState({ searchButtons: res.data }))     
+    .catch(err => console.log(err));  
+  };
 
-  saveSearch = event => {
+  componentDidMount(){
+    this.fetchButtons();
+  };
+
+  saveSearch() {
+    const newSearchBtn = this.state.search;
     API.saveSearch({
-      search:this.state.search,
+      search: newSearchBtn,
       api: this.state.mediaSearch
     })
+    this.fetchButtons();
   }
 
   // buttonAppend = event => {
@@ -45,6 +51,38 @@ class Home extends Component {
       [name]: value
     });
   };
+
+  saveBtnSearch = (api, search) => {
+    console.log(api)
+    console.log(search)
+    if (api === "News") {
+      API.searchNews(search)
+      .then(res => {
+        // console.log(res);
+        let articles = res.data.articles;
+        // console.log(articles);
+
+        articles = articles.slice(0, 10).map(article => {
+          article = {
+            key: articles._id,
+            title: article.title,
+            caption: article.description,
+            image: article.urlToImage,
+            link: article.url
+          }
+          // console.log(article.title);
+          return article;
+        });
+        // this.setState({
+        //   recipes: "",
+        //   tweets: "",
+        //   news: articles
+        // });
+      });
+    };
+
+  };
+
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -86,9 +124,9 @@ class Home extends Component {
     if (this.state.mediaSearch === "News") {
       API.searchNews(this.state.search)
         .then(res => {
-          // console.log(res);
+          console.log(res.request.responseURL);
           let articles = res.data.articles;
-          console.log(articles);
+          // console.log(articles);
 
           articles = articles.slice(0, 10).map(article => {
             article = {
@@ -98,7 +136,7 @@ class Home extends Component {
               image: article.urlToImage,
               link: article.url
             }
-            console.log(article.title);
+            // console.log(article.title);
             return article;
           });
           this.setState({
@@ -108,7 +146,7 @@ class Home extends Component {
           });
           let checkbox = document.getElementById('checkBox');
           if (checkbox.checked === true) {            
-            this.saveSearch()      
+            this.saveSearch()     
           };
         })
         .catch(err => console.log(err));
@@ -186,6 +224,7 @@ class Home extends Component {
                         key={call.id}
                         search={call.search}
                         api={call.mediaSearch}
+                        saveBtnSearch={this.saveBtnSearch}
                         />)}
                     </User_Buttons>
                   </div>

@@ -71,8 +71,8 @@ class Home extends Component {
             return result;
           });
           this.setState({
-            news: "",
-            tweets: "",
+            news: [],
+            tweets: [],
             recipes: results
           });
           let checkbox = document.getElementById('checkBox');
@@ -102,8 +102,8 @@ class Home extends Component {
             return article;
           });
           this.setState({
-            recipes: "",
-            tweets: "",
+            recipes: [],
+            tweets: [],
             news: articles
           });
           let checkbox = document.getElementById('checkBox');
@@ -135,8 +135,8 @@ class Home extends Component {
           return tweet;
           })
           this.setState({
-            recipes: "",  
-            news: "",
+            recipes: [],  
+            news: [],
             tweets: tweets
           })        
           let checkbox = document.getElementById('checkBox');

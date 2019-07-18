@@ -71,3 +71,15 @@
     border-radius: .5rem;
     color: rgb(235, 228, 228);
 }
+
+.about-modal-size {
+    min-width: 50%;
+}
+
+.modal-header-about {
+    background: var(--main-white);
+}
+
+.modal-footer-about {
+    background: var(--main-white);
+}

@@ -5,6 +5,7 @@ import SearchResultsRecipes from "../components/SearchResultsRecipes";
 import API from "../utils/API";
 import { InputValue, FormBtn } from "../components/SearchForm";
 import NewsSearch from "../components/NewsSearch";
+import Formatted_Buttons from "../components/Formatted_Buttons";
 import TwitterSearch from "../components/TwitterSearch"
 
 
@@ -15,15 +16,28 @@ class Home extends Component {
     news: [],
     tweets: [],
     mediaSearch: "",
-    api: ""
+    searchButtons: []
   };
+
+  componentDidMount(){
+    API.getSearch()
+    .then(res => this.setState({ searchButtons: res.data }))       
+    .catch(err => console.log(err));    
+  }
 
   saveSearch = event => {
     API.saveSearch({
-      search: this.state.search,
+      search:this.state.search,
       api: this.state.mediaSearch
     })
   }
+
+  // buttonAppend = event => {
+  //   API.getSearch({
+  //     search: this.state.search,
+  //     api: this.state.mediaSearch
+  //   })
+  // }
 
   handleInputChange = event => {
     const { name, value } = event.target
@@ -62,8 +76,8 @@ class Home extends Component {
             recipes: results
           });
           let checkbox = document.getElementById('checkBox');
-          if (checkbox.checked === true) {
-            this.saveSearch()
+          if (checkbox.checked === true) {            
+            this.saveSearch()            
           };
         })
         .catch(err => console.log(err));
@@ -86,18 +100,16 @@ class Home extends Component {
             }
             console.log(article.title);
             return article;
-          })
+          });
           this.setState({
             recipes: "",
             tweets: "",
             news: articles
-          })
+          });
           let checkbox = document.getElementById('checkBox');
-          console.log(checkbox.value)
-          if (checkbox.checked === true) {
-            this.saveSearch()
+          if (checkbox.checked === true) {            
+            this.saveSearch()      
           };
-
         })
         .catch(err => console.log(err));
     };
@@ -113,8 +125,11 @@ class Home extends Component {
               key: tweets._id,
               name: tweet.user.name,
               text: tweet.full_text,
-              image: tweet.profile_image_url,
-              link: tweet.source
+              image: tweet.user.profile_image_url,
+              link: tweet.source,
+              id: tweet.id_str,
+              user: tweet.user.id_str,
+              screenName: tweet.user.screen_name
             }
           console.log(tweet);
           return tweet;
@@ -164,7 +179,15 @@ class Home extends Component {
                   data-parent="#accordion1"
                 >
                   <div className="card-body">
-                    <User_Buttons />
+                    <User_Buttons> 
+                      {this.state.searchButtons.map(call =>
+                        <Formatted_Buttons 
+                        id={call.id}
+                        key={call.id}
+                        search={call.search}
+                        api={call.mediaSearch}
+                        />)}
+                    </User_Buttons>
                   </div>
                 </div>
               </div>

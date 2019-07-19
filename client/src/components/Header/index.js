@@ -24,10 +24,10 @@ function Header() {
                                 <Nav />
                                 <div className="row  button-list">
                                     <div className="col-12">
-                                        <button type="button" class="btn" id="login" data-toggle="modal" data-target="#loginModal">
+                                        <button type="button" className="login-button-style login" data-toggle="modal" data-target="#loginModal">
                                             Login
                                         </button>
-                                        <a href="/register"><button id="sign-up">Sign-Up</button></a>
+                                        <a href="/register"><button className="login-button-style sign-up-style" id="sign-up">Sign-Up</button></a>
                                     </div>
                                 </div>
                                 <Switch>
@@ -41,20 +41,25 @@ function Header() {
                 </div>
             </header>
             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog login-modal-size" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 className="modal-image-stripe">About Quick Aggregate</h4>>
+                        <div class="modal-header modal-header-about">
+                            <h5 className="modal-title main-title-modal" ><span className="highligher-modal">Quick</span>Aggregate</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            ...
-    </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <h4>Login</h4>
+                            <input className="user-login-input" type="email" placeholder="Email Adress"></input>
+                            <h4>Password</h4>
+                            <input className="user-password-input" type="password"></input>
+                        </div>
+                        <div class="modal-footer modal-footer-about">
+                            <div className="row">
+                                <button type="button" className="login-button-style login">Login</button>
+                                <button type="button" className="login-button-style sign-up-style" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>

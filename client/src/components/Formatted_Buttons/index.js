@@ -3,10 +3,14 @@ import "./style.css";
 import "../../utils/API";
 
 function Formatted_Buttons(props) {
-    // console.log(props)
+
     return (
-        <div className="button">
-            <button>{props.search}</button>
+        <div>
+            <button className="user-keyword"
+            id={props.search}
+            onClick={() => props.saveBtnSearch(props.api, props.search)}>
+            {props.search} 
+            </button>
         </div>
     );
 }

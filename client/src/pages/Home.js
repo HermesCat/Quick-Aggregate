@@ -10,14 +10,19 @@ import Formatted_Buttons from "../components/Formatted_Buttons";
 import Blank_Search from "../components/Blank_Search";
 
 class Home extends Component {
-  state = {
+  constructor(props) {
+  super(props)
+  this.state = {
     blankSearch: "",
     search: "",
     recipes: [],
     news: [],
     tweets: [],
     mediaSearch: "",
-    searchButtons: []
+    searchButtons: [],
+  };
+  this.saveBtnSearch = this.saveBtnSearch.bind(this);
+  this.handleFormSubmit = this.handleFormSubmit.bind(this);
   };
 
   fetchButtons() {
@@ -54,33 +59,115 @@ class Home extends Component {
     });
   };
 
+  // testDynoBtn = (api, search) => {
+  //   // window.location.href = "www.google.com";
+  //   console.log(api)
+  //   console.log(search)
+  // };
+
   saveBtnSearch = (api, search) => {
-    console.log(api)
-    console.log(search)
+
+    if (api === "Recipes") {
+
+      API.searchRecipes(search)
+        .then(res => {
+          console.log(res);
+          let results = res.data.recipes;
+
+          results = results.slice(0, 10).map(result => {
+            result = {
+              key: result.recipe_id,
+              id: result.recipe_id,
+              title: result.title,
+              publisher: result.publisher,
+              image: result.image_url,
+              rank: result.social_rank,
+              link: result.f2f_url
+            };
+            // console.log(result);
+            return result;
+          });
+          this.setState({
+            blankSearch: "",
+            news: [],
+            tweets: [],
+            recipes: results
+          });
+          let checkbox = document.getElementById('checkBox');
+          if (checkbox.checked === true) {
+            this.saveSearch()
+          };
+        })
+        .catch(err => console.log(err));
+    };
+
     if (api === "News") {
       API.searchNews(search)
-      .then(res => {
-        // console.log(res);
-        let articles = res.data.articles;
-        // console.log(articles);
+        .then(res => {
+          console.log(res.request.responseURL);
+          let articles = res.data.articles;
+          // console.log(articles);
 
-        articles = articles.slice(0, 10).map(article => {
-          article = {
-            key: articles._id,
-            title: article.title,
-            caption: article.description,
-            image: article.urlToImage,
-            link: article.url
-          }
-          // console.log(article.title);
-          return article;
-        });
-        // this.setState({
-        //   recipes: "",
-        //   tweets: "",
-        //   news: articles
-        // });
-      });
+          articles = articles.slice(0, 10).map(article => {
+            article = {
+              // key: articles._id,
+              title: article.title,
+              caption: article.description,
+              image: article.urlToImage,
+              link: article.url
+            }
+            // console.log(article.title);
+            return article;
+          })
+          this.setState({
+            blankSearch: "",
+            recipes: [],
+            tweets: [],
+            news: articles
+          })
+          let checkbox = document.getElementById('checkBox');
+          if (checkbox.checked === true) {            
+            this.saveSearch()     
+          };
+
+        })
+        .catch(err => console.log(err));
+    };
+    if (api === "Twitter") {
+      API.searchTwitter(search)
+        .then(res => {
+          console.log(res);
+          let tweets = res.data;
+          console.log(tweets);
+
+          tweets = tweets.slice(0, 10).map(tweet => {
+            tweet = {
+              key: tweets._id,
+              name: tweet.user.name,
+              text: tweet.full_text,
+              image: tweet.user.profile_image_url,
+              link: tweet.source,
+              id: tweet.id_str,
+              user: tweet.user.id_str,
+              screenName: tweet.user.screen_name
+            }
+            console.log(tweet);
+            return tweet;
+          })
+          this.setState({
+            blankSearch: "",
+            recipes: [],
+            news: [],
+            tweets: tweets
+          })
+          let checkbox = document.getElementById('checkBox');
+          console.log(checkbox.value)
+          if (checkbox.checked === true) {
+            this.saveSearch()
+          };
+
+        })
+        .catch(err => console.log(err));
     };
 
   };
@@ -237,7 +324,7 @@ class Home extends Component {
                         id={call.id}
                         key={call.id}
                         search={call.search}
-                        api={call.mediaSearch}
+                        api={call.api}
                         saveBtnSearch={this.saveBtnSearch}
                         />)}
                     </User_Buttons>

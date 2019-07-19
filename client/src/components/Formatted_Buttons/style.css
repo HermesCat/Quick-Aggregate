@@ -7,6 +7,31 @@
     width: auto;
     overflow: visible;
     margin-left: 15px;
+    position: relative;
+}
+
+.user-button-row {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.button-delete {
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    color: black;
+    position: absolute;
+    top:0;
+    right:0;
+    top: -10px;
+    color: rgb(22, 22, 22);
+}
+
+.button-delete:hover {
+    text-decoration: none;
+    color: red;
+    font-weight: bolder;
 }
 
 .recipe-buttons {

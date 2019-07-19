@@ -1,9 +1,6 @@
 import React from "react";
 import "./style.css";
 
-
-
-
 function User_Buttons(props) {
     return (
         <>

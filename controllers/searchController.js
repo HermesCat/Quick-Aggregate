@@ -29,7 +29,7 @@ module.exports = {
   },
 
   findByHashTag: function(req, res) {
-    var params = { q: "#" + req.query.search, tweet_mode: "extended" };
+    var params = { q: req.query.search, tweet_mode: "extended" };
     client.get("search/tweets.json", params, function(error, tweets, response) {
       if (!error) {
         return res.json(tweets.statuses);

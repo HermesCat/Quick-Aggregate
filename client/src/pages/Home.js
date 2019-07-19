@@ -20,12 +20,27 @@ class Home extends Component {
     searchButtons: []
   };
 
-  componentDidMount() {
-    API.getSearch()
-      .then(res => this.setState({ searchButtons: res.data }))
-      .catch(err => console.log(err));
 
+  fetchButtons() {
+    API.getSearch()
+    .then(res => this.setState({ searchButtons: res.data }))       
+    .catch(err => console.log(err)); 
   }
+
+  componentDidMount(){
+       this.fetchButtons()
+  }
+ 
+  saveSearch() {
+    const newSearchBtn = this.state.search;
+    API.saveSearch({
+      search: newSearchBtn,
+      api: this.state.mediaSearch
+    })
+    //todo: add search term to state
+    this.fetchButtons()
+  }
+ 
 
   // buttonAppend = event => {
   //   API.getSearch({

@@ -5,7 +5,7 @@ function Formatted_Buttons(props) {
     console.log(props)
     return (
         <div className="button">
-            <button>{props.search}</button>
+            <button className="user-keyword">{props.search}</button>
         </div>
     );
 }

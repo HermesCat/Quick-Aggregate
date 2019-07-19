@@ -38,6 +38,7 @@ class Home extends Component {
     })
     this.fetchButtons();
   }
+ 
 
   // buttonAppend = event => {
   //   API.getSearch({

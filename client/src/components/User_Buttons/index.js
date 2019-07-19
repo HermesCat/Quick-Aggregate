@@ -1,8 +1,5 @@
-import React, {Component} from "react";
+import React from "react";
 import "./style.css";
-import Formatted_Buttons from '../Formatted_Buttons'
-
-
 
 function User_Buttons(props) {
     return (

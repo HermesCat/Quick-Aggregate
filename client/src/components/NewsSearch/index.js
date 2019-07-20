@@ -9,7 +9,7 @@ const newsArticles = props => {
     <div className="card">
       <div className="article">
         {props.news.map(article => {
-          console.log(props);
+          // console.log(props);
           return (
             <li className="search-list list-group-item">
               <a href={article.link} className="articleLink" target="_blank"> 

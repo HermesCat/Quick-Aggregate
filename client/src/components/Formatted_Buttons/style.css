@@ -21,11 +21,12 @@
     font-weight: bold;
     position: relative;
     color: black;
-    position: absolute;
-    top:0;
-    right:0;
-    top: -10px;
+    /* position: absolute; */
+    /* top:0; */
+    /* right:0; */
+    /* top: -10px; */
     color: rgb(22, 22, 22);
+    cursor: pointer;
 }
 
 .button-delete:hover {

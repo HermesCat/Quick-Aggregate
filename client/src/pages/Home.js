@@ -23,7 +23,7 @@ class Home extends Component {
   };
   this.saveBtnSearch = this.saveBtnSearch.bind(this);
   this.handleFormSubmit = this.handleFormSubmit.bind(this);
-  this.deleteSearchButton = this.handleFormSubmit.bind(this);
+  this.deleteSearchButton = this.deleteSearchButton.bind(this);
   };
 
   fetchButtons() {
@@ -45,25 +45,15 @@ class Home extends Component {
     this.fetchButtons();
   }
 
-  deleteSearchButton(event) {
-    event.preventDefault();
-    console.log(this.state.searchButtons);
-    console.log(this)
-    // let term = this.search;
-    // console.log(term)
- 
-    this.state.searchButtons.splice(1);
- 
-    this.fetchButtons();
+  deleteSearchButton = (id) => {
+   console.log(id);
+   API.deleteSearch(
+     id
+   )
+   .then(res => this.fetchButtons())
+   .catch(err => console.log(err));  
   }
  
-
-  // buttonAppend = event => {
-  //   API.getSearch({
-  //     search: this.state.search,
-  //     api: this.state.mediaSearch
-  //   })
-  // }
 
   handleInputChange = event => {
     const { name, value } = event.target
@@ -71,12 +61,6 @@ class Home extends Component {
       [name]: value
     });
   };
-
-  // testDynoBtn = (api, search) => {
-  //   // window.location.href = "www.google.com";
-  //   console.log(api)
-  //   console.log(search)
-  // };
 
   saveBtnSearch = (api, search) => {
 
@@ -319,8 +303,8 @@ class Home extends Component {
                     <User_Buttons>
                       {this.state.searchButtons.map(call =>
                         <Formatted_Buttons 
-                        id={call.id}
-                        key={call.id}
+                        id={call._id}
+                        key={call._id}
                         search={call.search}
                         api={call.api}
                         saveBtnSearch={this.saveBtnSearch}

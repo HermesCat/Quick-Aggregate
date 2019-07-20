@@ -1,14 +1,59 @@
-import React from "react";
+import React, {Component} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "../Nav";
 import "./style.css";
 import HamburgerIcon from "./img/hamburger_icon.png";
+import API from '../../utils/API'
+
 
 // There are 2 versions of the header (small screen and desktop), remember this when creaating links and such
 
 
 
-function Header() {
+class Header extends Component {
+    state = {
+        email: "",
+        password: "",
+        isLoggedIn: false
+    }
+    
+    handleInputChange = (event) => {
+		// Getting the value and name of the input which triggered the change
+		let value = event.target.value;
+		const name = event.target.name;
+
+		// Updating the input's state
+		this.setState({
+			[name]: value
+		});
+    };
+    
+    handleFormSubmit = event => {
+        event.preventDefault();
+
+        API.logIn({
+            email: this.state.email,
+            password: this.state.password
+            
+        }).then(
+            res => {
+                this.setState({
+                    email: "",
+                    password: "",
+                    isLoggedIn: res.data.isLoggedIn
+                })
+                if(!res.data.isLoggedIn){
+                    console.log(res.data.message)
+                }
+                console.log(res)
+            }
+        )
+
+        
+        
+    }
+
+    render () {
     return (
         <>
             <header>
@@ -50,15 +95,30 @@ function Header() {
                             </button>
                         </div>
                         <div class="modal-body">
-                            <h4>Login</h4>
-                            <input className="user-login-input" type="email" placeholder="Email Adress"></input>
+                            <h4>Email</h4>
+                            <input 
+                            className="user-login-input"
+                            type ="email" 
+                            value={this.state.email}
+                            onChange={this.handleInputChange}
+                            placeholder="Email Adress"
+                            name="email"></input>
                             <h4>Password</h4>
-                            <input className="user-password-input" type="password"></input>
+                            <input className="user-password-input" 
+                            password="password"
+                            type="password"
+                            value={this.state.password}
+                            onChange={this.handleInputChange}
+                            name="password"></input>
                         </div>
                         <div class="modal-footer modal-footer-about">
                             <div className="row">
-                                <button type="button" className="login-button-style login">Login</button>
-                                <button type="button" className="login-button-style sign-up-style" data-dismiss="modal">Close</button>
+                                <button                            
+                                onClick={this.handleFormSubmit}
+                                className="login-button-style login">
+                                    Submit
+                                </button>
+                                <button className="login-button-style sign-up-style" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -66,6 +126,7 @@ function Header() {
             </div>
         </>
     );
+}
 }
 
 export default Header;

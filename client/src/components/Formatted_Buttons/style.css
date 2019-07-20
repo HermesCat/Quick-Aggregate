@@ -8,6 +8,8 @@
     overflow: visible;
     margin-left: 15px;
     position: relative;
+    color: rgb(230, 218, 218);
+    
 }
 
 .user-button-row {
@@ -17,22 +19,27 @@
 }
 
 .button-delete {
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     font-weight: bold;
     position: relative;
-    color: black;
-    position: absolute;
     top:0;
-    right:0;
-    top: -10px;
-    color: rgb(22, 22, 22);
+    right: 25px;
+    top: -15px;
+    font-family: 'Concert One', cursive;
+    font-size: 28px;
+    color: rgb(233, 10, 10);
+    cursor: pointer;
+
+
 }
 
 .button-delete:hover {
     text-decoration: none;
-    color: red;
     font-weight: bolder;
 }
+
 
 .Recipes-buttons {
     background: var(--recipe-green);
@@ -42,7 +49,7 @@
 }
 
 .News-buttons {
-    background: var(--news-purple);
+    background: var(--news-black);
 }
 
 .News-buttons:hover {

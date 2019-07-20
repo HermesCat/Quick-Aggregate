@@ -12,5 +12,6 @@ router.route("/tweets")
 //search route ID
 router.route("/:id")
     .get(searchController.findById)
+    .delete(searchController.findByIdAndRemove)
 
 module.exports = router;

@@ -36,7 +36,7 @@ export default {
   getSearch: function(savedSearch) {
     return axios.get("/api/search", savedSearch)
   },
-  deleteSearch: function(query) {
-    return axios.get("/api/search", query)
+  deleteSearch: function(id) {
+    return axios.delete("/api/search/" + id)
   }
 };

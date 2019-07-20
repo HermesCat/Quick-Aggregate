@@ -11,28 +11,29 @@ import Blank_Search from "../components/Blank_Search";
 
 class Home extends Component {
   constructor(props) {
-  super(props)
-  this.state = {
-    blankSearch: "",
-    search: "",
-    recipes: [],
-    news: [],
-    tweets: [],
-    mediaSearch: "",
-    searchButtons: [],
-  };
-  this.saveBtnSearch = this.saveBtnSearch.bind(this);
-  this.handleFormSubmit = this.handleFormSubmit.bind(this);
-  this.deleteSearchButton = this.handleFormSubmit.bind(this);
+    super(props)
+    this.state = {
+      edit: false,
+      blankSearch: "",
+      search: "",
+      recipes: [],
+      news: [],
+      tweets: [],
+      mediaSearch: "",
+      searchButtons: [],
+    };
+    this.saveBtnSearch = this.saveBtnSearch.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.deleteSearchButton = this.deleteSearchButton.bind(this);
   };
 
   fetchButtons() {
     API.getSearch()
-    .then(res => this.setState({ searchButtons: res.data }))     
-    .catch(err => console.log(err));  
+      .then(res => this.setState({ searchButtons: res.data }))
+      .catch(err => console.log(err));
   };
 
-  componentDidMount(){
+  componentDidMount() {
     this.fetchButtons();
   };
 
@@ -45,25 +46,15 @@ class Home extends Component {
     this.fetchButtons();
   }
 
-  deleteSearchButton(event) {
-    event.preventDefault();
-    console.log(this.state.searchButtons);
-    console.log(this)
-    // let term = this.search;
-    // console.log(term)
- 
-    this.state.searchButtons.splice(1);
- 
-    this.fetchButtons();
+  deleteSearchButton = (id) => {
+    console.log(id);
+    API.deleteSearch(
+      id
+    )
+      .then(res => this.fetchButtons())
+      .catch(err => console.log(err));
   }
- 
 
-  // buttonAppend = event => {
-  //   API.getSearch({
-  //     search: this.state.search,
-  //     api: this.state.mediaSearch
-  //   })
-  // }
 
   handleInputChange = event => {
     const { name, value } = event.target
@@ -71,12 +62,6 @@ class Home extends Component {
       [name]: value
     });
   };
-
-  // testDynoBtn = (api, search) => {
-  //   // window.location.href = "www.google.com";
-  //   console.log(api)
-  //   console.log(search)
-  // };
 
   saveBtnSearch = (api, search) => {
 
@@ -171,6 +156,11 @@ class Home extends Component {
   };
 
 
+  handleEdit = event => {
+    this.setState({ edit: !this.state.edit });
+  }
+
+
   handleFormSubmit = event => {
     event.preventDefault();
 
@@ -234,8 +224,8 @@ class Home extends Component {
             news: articles
           })
           let checkbox = document.getElementById('checkBox');
-          if (checkbox.checked === true) {            
-            this.saveSearch()     
+          if (checkbox.checked === true) {
+            this.saveSearch()
           };
 
         })
@@ -316,15 +306,17 @@ class Home extends Component {
                   data-parent="#accordion1"
                 >
                   <div className="card-body">
-                    <User_Buttons>
+                    <User_Buttons
+                      handleEdit={this.handleEdit}>
                       {this.state.searchButtons.map(call =>
-                        <Formatted_Buttons 
-                        id={call.id}
-                        key={call.id}
-                        search={call.search}
-                        api={call.api}
-                        saveBtnSearch={this.saveBtnSearch}
-                        deleteSearchButton={this.deleteSearchButton}
+                        <Formatted_Buttons
+                          edit={this.state.edit}
+                          id={call._id}
+                          key={call._id}
+                          search={call.search}
+                          api={call.api}
+                          saveBtnSearch={this.saveBtnSearch}
+                          deleteSearchButton={this.deleteSearchButton}
                         />)}
                     </User_Buttons>
                   </div>

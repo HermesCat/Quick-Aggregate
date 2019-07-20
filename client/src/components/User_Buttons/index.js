@@ -1,6 +1,14 @@
 import React from "react";
 import "./style.css";
 
+// getElementById('button_delete_x').style.display='block';
+const handleClick = () => {
+    let button_delete_target = document.getElementById('button_delete_x');
+    console.log(button_delete_target);
+    button_delete_target.style = ("display: none")
+
+}
+
 function User_Buttons(props) {
     return (
         <>
@@ -8,7 +16,10 @@ function User_Buttons(props) {
                 <p>Your saved searches are stored here as buttons.</p>
             </div>
             <div className="row" id="search_button_row">
-                <h4>Your Keywords: </h4>
+                <div className="col-9"><h4>Your Keywords: </h4></div>
+                <div className="col-3">
+                    <p id="edit_button_click" onClick={props.handleEdit} className="edit_button_list">Edit Buttons</p>
+                </div>
                 <div className="row button_array">
                     {props.children}
                 </div>

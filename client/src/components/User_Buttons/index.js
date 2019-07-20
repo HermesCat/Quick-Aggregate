@@ -18,7 +18,7 @@ function User_Buttons(props) {
             <div className="row" id="search_button_row">
                 <div className="col-9"><h4>Your Keywords: </h4></div>
                 <div className="col-3">
-                    <p id="edit_button_click" onClick={() => handleClick()} className="edit_button_list">Edit Buttons</p>
+                    <p id="edit_button_click" onClick={props.handleEdit} className="edit_button_list">Edit Buttons</p>
                 </div>
                 <div className="row button_array">
                     {props.children}

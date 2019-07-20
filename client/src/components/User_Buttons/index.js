@@ -5,7 +5,7 @@ import "./style.css";
 const handleClick = () => {
     let button_delete_target = document.getElementById('button_delete_x');
     console.log(button_delete_target);
-    button_delete_target.style = ("display: block")
+    button_delete_target.style = ("display: none")
 
 }
 

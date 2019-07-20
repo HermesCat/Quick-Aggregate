@@ -23,6 +23,7 @@ class Home extends Component {
   };
   this.saveBtnSearch = this.saveBtnSearch.bind(this);
   this.handleFormSubmit = this.handleFormSubmit.bind(this);
+  this.deleteSearchButton = this.handleFormSubmit.bind(this);
   };
 
   fetchButtons() {
@@ -41,6 +42,18 @@ class Home extends Component {
       search: newSearchBtn,
       api: this.state.mediaSearch
     })
+    this.fetchButtons();
+  }
+
+  deleteSearchButton(event) {
+    event.preventDefault();
+    console.log(this.state.searchButtons);
+    console.log(this)
+    // let term = this.search;
+    // console.log(term)
+ 
+    this.state.searchButtons.splice(1);
+ 
     this.fetchButtons();
   }
  
@@ -93,10 +106,6 @@ class Home extends Component {
             tweets: [],
             recipes: results
           });
-          let checkbox = document.getElementById('checkBox');
-          if (checkbox.checked === true) {
-            this.saveSearch()
-          };
         })
         .catch(err => console.log(err));
     };
@@ -125,11 +134,6 @@ class Home extends Component {
             tweets: [],
             news: articles
           })
-          let checkbox = document.getElementById('checkBox');
-          if (checkbox.checked === true) {            
-            this.saveSearch()     
-          };
-
         })
         .catch(err => console.log(err));
     };
@@ -160,12 +164,6 @@ class Home extends Component {
             news: [],
             tweets: tweets
           })
-          let checkbox = document.getElementById('checkBox');
-          console.log(checkbox.value)
-          if (checkbox.checked === true) {
-            this.saveSearch()
-          };
-
         })
         .catch(err => console.log(err));
     };
@@ -326,6 +324,7 @@ class Home extends Component {
                         search={call.search}
                         api={call.api}
                         saveBtnSearch={this.saveBtnSearch}
+                        deleteSearchButton={this.deleteSearchButton}
                         />)}
                     </User_Buttons>
                   </div>

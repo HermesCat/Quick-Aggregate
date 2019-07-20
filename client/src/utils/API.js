@@ -16,13 +16,17 @@ export default {
   },
   //saving users to mongo
   saveUser: function(userData) {
-    console.log(userData)
+    
     return axios.post("/api/users", userData)
   },
   // Saves a book to the database
   saveSearch: function(searchData) {
-    console.log(searchData)
+    
     return axios.post("/api/search", searchData);
+  },
+  logIn: function(userData) {
+    
+    return axios.post("/api/users/login", userData)
   },
   //searching newsAPI
   searchNews: function(query) {

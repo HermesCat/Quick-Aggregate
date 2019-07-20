@@ -34,6 +34,10 @@
     font-weight: bolder;
 }
 
+#button_delete_x {
+    display: none;
+}
+
 .Recipes-buttons {
     background: var(--recipe-green);
 }

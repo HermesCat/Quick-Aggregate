@@ -11,10 +11,11 @@ function Formatted_Buttons(props) {
         onClick={() => props.saveBtnSearch(props.api, props.search)}
       >
         {props.search}
-        <span className="button-delete" onClick={props.deleteSearchButton}>
+        
+      </button>
+      <span className="button-delete" onClick={() => props.deleteSearchButton(props.id)}>
           x
         </span>
-      </button>
     </div>
   );
 }

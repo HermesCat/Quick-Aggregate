@@ -43,7 +43,7 @@
 }
 
 .News-buttons {
-    background: var(--main-grey);
+    background: var(--news-purple);
 }
 
 .News-buttons:hover {

@@ -6,4 +6,5 @@
     --card-grey: linear-gradient(to right, rgb(204, 194, 194), rgb(187, 175, 175));
     --twitter-blue: linear-gradient( #38A1F3, rgb(38, 135, 209));
     --recipe-green: linear-gradient(  #2ECC40, rgb(41, 194, 58));
+    --news-purple: linear-gradient(  rgb(145, 7, 145), rgb(100, 6, 100));
 }

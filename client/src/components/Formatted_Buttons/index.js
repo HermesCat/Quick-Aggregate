@@ -13,10 +13,15 @@ function Formatted_Buttons(props) {
         onClick={() => props.saveBtnSearch(props.api, props.search)}
       >
         {props.search}
+<<<<<<< HEAD
         <span id="button_delete_x" className="button-delete" onClick={props.deleteSearchButton}>
+=======
+        
+      </button>
+      <span className="button-delete" onClick={() => props.deleteSearchButton(props.id)}>
+>>>>>>> 52ac50f9269424f92cd7d5270733101478a3aab3
           x
         </span>
-      </button>
     </div>
   );
 }

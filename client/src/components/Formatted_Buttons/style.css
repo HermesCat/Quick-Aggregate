@@ -34,25 +34,25 @@
     font-weight: bolder;
 }
 
-.recipe-buttons {
+.Recipes-buttons {
     background: var(--recipe-green);
 }
-.recipe-buttons:hover {
+.Recipes-buttons:hover {
     background: grey;
 }
 
-.news-buttons {
+.News-buttons {
     background: var(--main-grey);
 }
 
-.news-buttons:hover {
+.News-buttons:hover {
     background: grey;
 }
 
-.twitter-buttons {
+.Twitter-buttons {
     background: var(--twitter-blue);
 }
 
-.twitter-buttons:hover {
+.Twitter-buttons:hover {
     background: grey;
 }

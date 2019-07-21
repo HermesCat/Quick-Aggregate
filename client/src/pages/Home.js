@@ -63,7 +63,7 @@ class Home extends Component {
     });
   };
 
-  saveBtnSearch = (api, search) => {
+  saveBtnSearch(api, search) {
 
     if (api === "Recipes") {
 

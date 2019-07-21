@@ -14,8 +14,15 @@ class Header extends Component {
     state = {
         email: "",
         password: "",
-        isLoggedIn: false
+        isLoggedIn: false,
+        isHidden: true
     }
+
+    toggleHidden () {
+        this.setState({
+          isHidden: !this.state.isHidden
+        })
+      }
     
     handleInputChange = (event) => {
 		// Getting the value and name of the input which triggered the change
@@ -45,13 +52,14 @@ class Header extends Component {
                 if(!res.data.isLoggedIn){
                     console.log(res.data.message)
                 }
+                if(res.data.isLoggedIn){
+
+                }
                 console.log(res)
             }
-        )
-
-        
-        
+        )            
     }
+
 
     render () {
     return (
@@ -69,10 +77,20 @@ class Header extends Component {
                                 <Nav />
                                 <div className="row  button-list">
                                     <div className="col-12">
-                                        <button type="button" className="login-button-style login" data-toggle="modal" data-target="#loginModal">
+                                        <button 
+                                        type="button" 
+                                        className="login-button-style login" 
+                                        data-toggle="modal" 
+                                        data-target="#loginModal">
                                             Login
                                         </button>
-                                        <a href="/register"><button className="login-button-style sign-up-style" id="sign-up">Sign-Up</button></a>
+                                        <a href="/register">
+                                            <button 
+                                            className="login-button-style sign-up-style" 
+                                            id="sign-up">
+                                                Sign-Up
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                                 <Switch>
@@ -85,10 +103,10 @@ class Header extends Component {
                     </div>
                 </div>
             </header>
-            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog login-modal-size" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header modal-header-about">
+            <div className="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog login-modal-size" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header modal-header-about">
                             <h5 className="modal-title main-title-modal" ><span className="highligher-modal">Quick</span>Aggregate</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -114,8 +132,9 @@ class Header extends Component {
                         <div class="modal-footer modal-footer-about">
                             <div className="row">
                                 <button                            
-                                onClick={this.handleFormSubmit}
-                                className="login-button-style login">
+                                onClick={ this.handleFormSubmit }
+                                className="login-button-style login"
+                                data-dismiss ="modal">
                                     Submit
                                 </button>
                                 <button className="login-button-style sign-up-style" data-dismiss="modal">Close</button>

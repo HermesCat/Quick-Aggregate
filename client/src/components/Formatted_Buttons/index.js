@@ -2,8 +2,6 @@ import React from "react";
 import "./style.css";
 import "../../utils/API";
 
-
-
 function Formatted_Buttons(props) {
   return (
     <div>
@@ -14,9 +12,15 @@ function Formatted_Buttons(props) {
       >
         {props.search}
       </button>
-      {props.edit && (<span id="button_delete_x" className="button-delete" onClick={() => props.deleteSearchButton(props.id)}>
-        x
-        </span>)}
+      {props.edit && (
+        <span
+          id="button_delete_x"
+          className="button-delete"
+          onClick={() => props.deleteSearchButton(props.id)}
+        >
+          x
+        </span>
+      )}
     </div>
   );
 }

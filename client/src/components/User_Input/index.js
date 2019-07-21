@@ -1,24 +1,15 @@
 import React from "react";
 import "./style.css";
 
-
-
 function User_Input() {
-
-
-
   return (
     <>
-
       <div className="row">
         <div class="input-group mb-3">
           <div className="input-group-prepend">
-            <span
-              className="input-group-text"
-              id="inputGroup-sizing-default"
-            >
+            <span className="input-group-text" id="inputGroup-sizing-default">
               Keyword
-                </span>
+            </span>
           </div>
           <input
             type="text"
@@ -28,13 +19,8 @@ function User_Input() {
           />
         </div>
       </div>
-
-
-
-
     </>
   );
 }
-
 
 export default User_Input;

@@ -4,13 +4,13 @@ footer {
   background: var(--main-white);
   padding-top: 10px;
   text-align: center;
-  border-top: red solid .2rem;
+  border-top: red solid 0.2rem;
 }
 
 .highligher_footer {
   background-image: var(--highlighter-red);
-  padding: .2rem;
+  padding: 0.2rem;
   margin-left: 3rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: rgb(235, 228, 228);
 }

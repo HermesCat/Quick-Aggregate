@@ -1,12 +1,12 @@
-import React from 'react';
-import RegisterForm from '../components/RegisterForm'
+import React from "react";
+import RegisterForm from "../components/RegisterForm";
 
 function Register(props) {
-    return (
-        <>
-            <RegisterForm />
-        </>
-    )
+  return (
+    <>
+      <RegisterForm />
+    </>
+  );
 }
 
-export default Register
+export default Register;

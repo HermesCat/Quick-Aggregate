@@ -1,51 +1,51 @@
 .home-content-row {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.collapse{
-    margin: 0;
+.collapse {
+  margin: 0;
 }
 
-.btn-link{
-    text-decoration: none;
-    color: black;
+.btn-link {
+  text-decoration: none;
+  color: black;
 }
 
-.btn-link:hover, .btn-link:focus, .btn-link:visited {
-    text-decoration: none;
-    color: black;
-  }
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:visited {
+  text-decoration: none;
+  color: black;
+}
 
+#accordion {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-  #accordion {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
+.card {
+  margin: 0;
+}
 
-  .card {
-      margin: 0;
-  }
+.page-title {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 0;
+  margin-left: 2rem;
+}
 
-  .page-title {
-      font-family: 'Lato', sans-serif;
-      font-weight: bold;
-      font-size: 2.5rem;
-      margin: 0;
-      margin-left: 2rem;
-  }
+.contact-title {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 0;
+  margin-left: 3.3rem;
+  margin-bottom: 2rem;
+}
 
-  .contact-title {
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    font-size: 2.5rem;
-    margin: 0;
-    margin-left: 3.3rem;
-    margin-bottom: 2rem;
-  }
-
-  .contact-card {
-      margin: 2rem;
-  }
- 
+.contact-card {
+  margin: 2rem;
+}

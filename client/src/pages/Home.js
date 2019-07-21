@@ -5,13 +5,13 @@ import SearchResultsRecipes from "../components/SearchResultsRecipes";
 import API from "../utils/API";
 import { InputValue, FormBtn } from "../components/SearchForm";
 import NewsSearch from "../components/NewsSearch";
-import TwitterSearch from "../components/TwitterSearch"
+import TwitterSearch from "../components/TwitterSearch";
 import Formatted_Buttons from "../components/Formatted_Buttons";
 import Blank_Search from "../components/Blank_Search";
 
 class Home extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       edit: false,
       blankSearch: "",
@@ -20,53 +20,48 @@ class Home extends Component {
       news: [],
       tweets: [],
       mediaSearch: "",
-      searchButtons: [],
+      searchButtons: []
     };
     this.saveBtnSearch = this.saveBtnSearch.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.deleteSearchButton = this.deleteSearchButton.bind(this);
-  };
+  }
 
   fetchButtons() {
     API.getSearch()
       .then(res => this.setState({ searchButtons: res.data }))
       .catch(err => console.log(err));
-  };
+  }
 
   componentDidMount() {
     this.fetchButtons();
-  };
+  }
 
   saveSearch() {
     const newSearchBtn = this.state.search;
     API.saveSearch({
       search: newSearchBtn,
       api: this.state.mediaSearch
-    })
+    });
     this.fetchButtons();
   }
 
-  deleteSearchButton = (id) => {
+  deleteSearchButton = id => {
     console.log(id);
-    API.deleteSearch(
-      id
-    )
+    API.deleteSearch(id)
       .then(res => this.fetchButtons())
       .catch(err => console.log(err));
-  }
-
+  };
 
   handleInputChange = event => {
-    const { name, value } = event.target
+    const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   };
 
   saveBtnSearch = (api, search) => {
-
     if (api === "Recipes") {
-
       API.searchRecipes(search)
         .then(res => {
           console.log(res);
@@ -82,7 +77,7 @@ class Home extends Component {
               rank: result.social_rank,
               link: result.f2f_url
             };
-            // console.log(result);
+
             return result;
           });
           this.setState({
@@ -93,35 +88,33 @@ class Home extends Component {
           });
         })
         .catch(err => console.log(err));
-    };
+    }
 
     if (api === "News") {
       API.searchNews(search)
         .then(res => {
           console.log(res.request.responseURL);
           let articles = res.data.articles;
-          // console.log(articles);
 
           articles = articles.slice(0, 10).map(article => {
             article = {
-              // key: articles._id,
               title: article.title,
               caption: article.description,
               image: article.urlToImage,
               link: article.url
-            }
-            // console.log(article.title);
+            };
+
             return article;
-          })
+          });
           this.setState({
             blankSearch: "",
             recipes: [],
             tweets: [],
             news: articles
-          })
+          });
         })
         .catch(err => console.log(err));
-    };
+    }
     if (api === "Twitter") {
       API.searchTwitter(search)
         .then(res => {
@@ -139,34 +132,29 @@ class Home extends Component {
               id: tweet.id_str,
               user: tweet.user.id_str,
               screenName: tweet.user.screen_name
-            }
+            };
             console.log(tweet);
             return tweet;
-          })
+          });
           this.setState({
             blankSearch: "",
             recipes: [],
             news: [],
             tweets: tweets
-          })
+          });
         })
         .catch(err => console.log(err));
-    };
-
+    }
   };
-
 
   handleEdit = event => {
     this.setState({ edit: !this.state.edit });
-  }
-
+  };
 
   handleFormSubmit = event => {
     event.preventDefault();
 
-
     if (this.state.mediaSearch === "Recipes") {
-
       API.searchRecipes(this.state.search)
         .then(res => {
           console.log(res);
@@ -182,7 +170,7 @@ class Home extends Component {
               rank: result.social_rank,
               link: result.f2f_url
             };
-            // console.log(result);
+
             return result;
           });
           this.setState({
@@ -191,46 +179,43 @@ class Home extends Component {
             tweets: [],
             recipes: results
           });
-          let checkbox = document.getElementById('checkBox');
+          let checkbox = document.getElementById("checkBox");
           if (checkbox.checked === true) {
-            this.saveSearch()
-          };
+            this.saveSearch();
+          }
         })
         .catch(err => console.log(err));
-    };
+    }
 
     if (this.state.mediaSearch === "News") {
       API.searchNews(this.state.search)
         .then(res => {
           console.log(res.request.responseURL);
           let articles = res.data.articles;
-          // console.log(articles);
 
           articles = articles.slice(0, 10).map(article => {
             article = {
-              // key: articles._id,
               title: article.title,
               caption: article.description,
               image: article.urlToImage,
               link: article.url
-            }
-            // console.log(article.title);
+            };
+
             return article;
-          })
+          });
           this.setState({
             blankSearch: "",
             recipes: [],
             tweets: [],
             news: articles
-          })
-          let checkbox = document.getElementById('checkBox');
+          });
+          let checkbox = document.getElementById("checkBox");
           if (checkbox.checked === true) {
-            this.saveSearch()
-          };
-
+            this.saveSearch();
+          }
         })
         .catch(err => console.log(err));
-    };
+    }
     if (this.state.mediaSearch === "Twitter") {
       API.searchTwitter(this.state.search)
         .then(res => {
@@ -248,34 +233,37 @@ class Home extends Component {
               id: tweet.id_str,
               user: tweet.user.id_str,
               screenName: tweet.user.screen_name
-            }
+            };
             console.log(tweet);
             return tweet;
-          })
+          });
           this.setState({
             blankSearch: "",
             recipes: [],
             news: [],
             tweets: tweets
-          })
-          let checkbox = document.getElementById('checkBox');
-          console.log(checkbox.value)
+          });
+          let checkbox = document.getElementById("checkBox");
+          console.log(checkbox.value);
           if (checkbox.checked === true) {
-            this.saveSearch()
-          };
-
+            this.saveSearch();
+          }
         })
         .catch(err => console.log(err));
-    };
-  }
+    }
+  };
 
   shouldDisplaySearchResults = () => {
-    if (this.state.news.length !== 0 || this.state.tweets.length !== 0 || this.state.recipes.length !== 0) {
+    if (
+      this.state.news.length !== 0 ||
+      this.state.tweets.length !== 0 ||
+      this.state.recipes.length !== 0
+    ) {
       return true;
     } else {
       return false;
     }
-  }
+  };
 
   render() {
     return (
@@ -306,9 +294,8 @@ class Home extends Component {
                   data-parent="#accordion1"
                 >
                   <div className="card-body">
-                    <User_Buttons
-                      handleEdit={this.handleEdit}>
-                      {this.state.searchButtons.map(call =>
+                    <User_Buttons handleEdit={this.handleEdit}>
+                      {this.state.searchButtons.map(call => (
                         <Formatted_Buttons
                           edit={this.state.edit}
                           id={call._id}
@@ -317,7 +304,8 @@ class Home extends Component {
                           api={call.api}
                           saveBtnSearch={this.saveBtnSearch}
                           deleteSearchButton={this.deleteSearchButton}
-                        />)}
+                        />
+                      ))}
                     </User_Buttons>
                   </div>
                 </div>
@@ -354,7 +342,7 @@ class Home extends Component {
                               id="inputGroup-sizing-default"
                             >
                               Keyword
-                      </span>
+                            </span>
                           </div>
                           <InputValue
                             value={this.search}
@@ -366,12 +354,21 @@ class Home extends Component {
                       <div className="row">
                         <div className="input-group mb-3">
                           <div className="input-group-prepend">
-                            <label className="input-group-text" for="inputGroupSelect01">
+                            <label
+                              className="input-group-text"
+                              for="inputGroupSelect01"
+                            >
                               Search-Type
-                      </label>
+                            </label>
                           </div>
-                          <select className="custom-select" id="inputGroupSelect01" onChange={(e) => { this.setState({ mediaSearch: e.target.value }) }}>>
-                      <option selected>Choose...</option>
+                          <select
+                            className="custom-select"
+                            id="inputGroupSelect01"
+                            onChange={e => {
+                              this.setState({ mediaSearch: e.target.value });
+                            }}
+                          >
+                            ><option selected>Choose...</option>
                             <option value="News">News</option>
                             <option value="Twitter">Twitter</option>
                             <option value="Recipes">Recipes</option>
@@ -379,16 +376,23 @@ class Home extends Component {
                         </div>
                       </div>
                       <div className="form-check ">
-                        <input type="checkbox" className="form-check-input" id="checkBox" />
-                        <label className="form-check-label" for="exampleCheck1">Remember Search</label>
+                        <input
+                          type="checkbox"
+                          className="form-check-input"
+                          id="checkBox"
+                        />
+                        <label className="form-check-label" for="exampleCheck1">
+                          Remember Search
+                        </label>
                       </div>
-                      <FormBtn onClick={(event) => this.handleFormSubmit(event)}>Search</FormBtn>
+                      <FormBtn onClick={event => this.handleFormSubmit(event)}>
+                        Search
+                      </FormBtn>
                     </form>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
           <div className="col-lg-7 d-none d-lg-block">
             <div id="accordion">
@@ -414,12 +418,15 @@ class Home extends Component {
                   data-parent="#accordion4"
                 >
                   <div className="card-body" id="card-body-results">
-                    {this.shouldDisplaySearchResults() ? (<React.Fragment>
-                      <SearchResultsRecipes recipes={this.state.recipes} />
-                      <NewsSearch news={this.state.news} />
-                      <TwitterSearch tweets={this.state.tweets} />
-                    </React.Fragment>) : (
-                        <Blank_Search />)}
+                    {this.shouldDisplaySearchResults() ? (
+                      <React.Fragment>
+                        <SearchResultsRecipes recipes={this.state.recipes} />
+                        <NewsSearch news={this.state.news} />
+                        <TwitterSearch tweets={this.state.tweets} />
+                      </React.Fragment>
+                    ) : (
+                      <Blank_Search />
+                    )}
                   </div>
                 </div>
               </div>

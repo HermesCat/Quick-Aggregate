@@ -1,33 +1,22 @@
-/* .viewRecipeBtn {
-    background: var(--highlighter-red);
-    color: white;
-    margin-top: 30px;
-} */
-
 .recipeLink:hover {
-    text-decoration: none;
-    color: #212529;
+  text-decoration: none;
+  color: #212529;
 }
 
-
 .recipeLink {
-    text-decoration: none;
-    color: #212529;
+  text-decoration: none;
+  color: #212529;
 }
 
 .recipeImage {
-    height: 200px;
-    width: 200px;
+  height: 200px;
+  width: 200px;
 }
 
-
-
 .list-group-item {
-    max-height: 226px;
-
-
+  max-height: 226px;
 }
 
 .list-group-item:hover {
-    background: lightgray;
+  background: lightgray;
 }

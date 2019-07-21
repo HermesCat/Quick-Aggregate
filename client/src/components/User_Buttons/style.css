@@ -1,28 +1,24 @@
 #search_button_row {
-    margin-bottom: 5px;
-    padding-right: 3px;
-    padding-left: 3px;
-    padding-bottom: 12px;
-    border: black solid 1px;
-    overflow: none;
-    margin-right: 3px;
-    margin-left: 3px;
+  margin-bottom: 5px;
+  padding-right: 3px;
+  padding-left: 3px;
+  padding-bottom: 12px;
+  border: black solid 1px;
+  overflow: none;
+  margin-right: 3px;
+  margin-left: 3px;
 }
 
-#search_button_row h4{
-    margin-left: 6px;
-}
-
-
-#search_button_info {
+#search_button_row h4 {
+  margin-left: 6px;
 }
 
 .button_array {
-    margin: 25px 5px 25px 10px;
+  margin: 25px 5px 25px 10px;
 }
 
 .edit_button_list:hover {
-    cursor: pointer;
-    color: blue;
-    text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
 }

@@ -1,92 +1,92 @@
 header {
-    padding-top: .9rem;
-    padding-bottom: .3rem;
-    width: 100%;
-    height: 5rem;
-    background: var(--main-white);
-    border-bottom: red solid .2rem;
-    margin-bottom: 3rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.3rem;
+  width: 100%;
+  height: 5rem;
+  background: var(--main-white);
+  border-bottom: red solid 0.2rem;
+  margin-bottom: 3rem;
 }
 
 .main-title {
-    padding-top: .5rem;
-    margin-left: .8rem;
-    font-size: 1.5rem;
+  padding-top: 0.5rem;
+  margin-left: 0.8rem;
+  font-size: 1.5rem;
 }
 
-.highligher{
-    background-image: var(--highlighter-red);
-    padding: .5rem;
-    margin-left: 3rem;
-    border-radius: .5rem;
-    color: rgb(235, 228, 228);
+.highligher {
+  background-image: var(--highlighter-red);
+  padding: 0.5rem;
+  margin-left: 3rem;
+  border-radius: 0.5rem;
+  color: rgb(235, 228, 228);
 }
 
-#login-row{
-    margin-right: 3rem;
+#login-row {
+  margin-right: 3rem;
 }
 
 .login-button-style {
-    text-decoration: none;
-    border: none;
-    padding: .9rem;
-    border-radius: .5rem;
-    margin: 3px;
-    color: white;
+  text-decoration: none;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 0.5rem;
+  margin: 3px;
+  color: white;
 }
 
 .login-button-style:hover {
-    background: grey;
+  background: grey;
 }
 
 .login {
-    background: var(--highlighter-red);
+  background: var(--highlighter-red);
 }
 
 .sign-up-style {
-    background:  var(--main-grey);
-    color: black;
+  background: var(--main-grey);
+  color: black;
 }
 
-.button-list{
-    margin: 0;
-    padding-left: 8rem;
+.button-list {
+  margin: 0;
+  padding-left: 8rem;
 }
 
 .hamburger-icon {
-    height: 3rem;
-    width: 3rem;
-    margin: 0;
-    margin-left: 0;
-    position: absolute;
-    left: 45px;
+  height: 3rem;
+  width: 3rem;
+  margin: 0;
+  margin-left: 0;
+  position: absolute;
+  left: 45px;
 }
 
 .navigation {
-    padding: 0;
+  padding: 0;
 }
 
 .login-modal-size {
-    min-width: 35%;
+  min-width: 35%;
 }
 
 .user-login-input {
-    width: 100%;
-    padding-left: 2px;
+  width: 100%;
+  padding-left: 2px;
 }
 
 .user-password-input {
-    width: 100%;
-    padding-left: 2px;
+  width: 100%;
+  padding-left: 2px;
 }
 
 @media only screen and (min-width: 600px) {
-    Header {
-      height: 8rem;
-    }
-    .main-title {
-        padding-top: .5rem;
-        margin-left: .5rem;
-        font-size: 2.8rem;
-    }
+  header {
+    height: 8rem;
   }
+  .main-title {
+    padding-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 2.8rem;
+  }
+}

@@ -1,65 +1,61 @@
 .user-keyword {
-    border: none;
-    margin: 4px;
-    padding: 10px 10px 10px 10px;
-    font-size: 20px;
-    border-radius: 8px;
-    width: auto;
-    overflow: visible;
-    margin-left: 15px;
-    position: relative;
-    color: rgb(230, 218, 218);
-    
+  border: none;
+  margin: 4px;
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  width: auto;
+  overflow: visible;
+  margin-left: 15px;
+  position: relative;
+  color: rgb(230, 218, 218);
 }
 
 .user-button-row {
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 .button-delete {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    top:0;
-    right: 25px;
-    top: -15px;
-    font-family: 'Concert One', cursive;
-    font-size: 28px;
-    color: rgb(233, 10, 10);
-    cursor: pointer;
-
-
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  top: 0;
+  right: 25px;
+  top: -15px;
+  font-family: "Concert One", cursive;
+  font-size: 28px;
+  color: rgb(233, 10, 10);
+  cursor: pointer;
 }
 
 .button-delete:hover {
-    text-decoration: none;
-    font-weight: bolder;
+  text-decoration: none;
+  font-weight: bolder;
 }
-
 
 .Recipes-buttons {
-    background: var(--recipe-green);
+  background: var(--recipe-green);
 }
 .Recipes-buttons:hover {
-    background: grey;
+  background: grey;
 }
 
 .News-buttons {
-    background: var(--news-black);
+  background: var(--news-black);
 }
 
 .News-buttons:hover {
-    background: grey;
+  background: grey;
 }
 
 .Twitter-buttons {
-    background: var(--twitter-blue);
+  background: var(--twitter-blue);
 }
 
 .Twitter-buttons:hover {
-    background: grey;
+  background: grey;
 }

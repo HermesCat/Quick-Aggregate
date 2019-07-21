@@ -1,18 +1,16 @@
-
-
 .nav-link {
-    text-decoration: none;
-    display: inline;
-    color: red;
-    font-size: 1.3rem;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
+  text-decoration: none;
+  display: inline;
+  color: red;
+  font-size: 1.3rem;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .nav-link:hover {
-    color: grey;
+  color: grey;
 }
 
 .nav-item {
-    display: inline;
+  display: inline;
 }

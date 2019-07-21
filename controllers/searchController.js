@@ -27,11 +27,11 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  
+
   findByIdAndRemove: function(req, res) {
     db.Search.findByIdAndRemove(req.params.id)
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err));
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
   },
 
   findByHashTag: function(req, res) {

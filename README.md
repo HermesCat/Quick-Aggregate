@@ -51,7 +51,7 @@ In the immediate future we will continue to build out the APIs we have currently
 
 
 ## Contributors
-*John Pettis* [https://github.com/HermesCat]
-*Tyler Lewis* [https://github.com/GrimbleLewis]
-*William Wood* [https://github.com/twood17]
-*Greg Chu* [https://github.com/GC0728]
+* *John Pettis* [https://github.com/HermesCat]
+* *Tyler Lewis* [https://github.com/GrimbleLewis]
+* *William Wood* [https://github.com/twood17]
+* *Greg Chu* [https://github.com/GC0728]

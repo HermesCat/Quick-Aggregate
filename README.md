@@ -1,7 +1,7 @@
 # Quick-Aggregate
 A news/media aggregate to quickly search through your favorite media.
 
-**Checkout our application!** [https://quick-aggregate.herokuapp.com/]
+[**Checkout our application!**] (https://quick-aggregate.herokuapp.com/)
 
 ## What is Quick Aggregate?
 Quick Aggregate allows its users to get updates on all of their social media platforms quickly and from a single location. No longer will you have to go from website to website and login individually to each just stay current on the lastest news. With Quick Aggregate, valuable time is saved using your favorite social media platforms allowing you to squeeze even more productivity from your day! 
@@ -11,7 +11,7 @@ We want Quick Aggregate to be a user's one-stop-shop for using their social medi
 Quick Aggregate is the social media aggregating website for the user on-the-go! 
 
 ## Installation and Use
-No installation is required for use. Simply navigate over to [https://quick-aggregate.herokuapp.com/], create an account with a username and password, and begin browsing your various social media platforms through our application! 
+No installation is required for use. Simply navigate over to (https://quick-aggregate.herokuapp.com/), create an account with a username and password, and begin browsing your various social media platforms through our application! 
 
 To use our application, select the social media platfrom from the "Search-Type" dropdown menu and enter your search into the "Keyword" field. Once you submit the search our application will display the results on the same webpage. There is no longer any need to juggle multiple websites across multiple brower tabs or windows. 
 
@@ -51,7 +51,7 @@ In the immediate future we will continue to build out the APIs we have currently
 
 
 ## Contributors
-* *John Pettis* [https://github.com/HermesCat]
-* *Tyler Lewis* [https://github.com/GrimbleLewis]
-* *William Wood* [https://github.com/twood17]
-* *Greg Chu* [https://github.com/GC0728]
+* [*John Pettis*] (https://github.com/HermesCat)
+* [*Tyler Lewis*] (https://github.com/GrimbleLewis)
+* [*William Wood*] (https://github.com/twood17)
+* [Greg Chu] (https://github.com/GC0728)

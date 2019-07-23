@@ -9,9 +9,10 @@
 }
 
 .tweetImage {
-  height: 75px;
-  width: 75px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
+  margin-left: 20px;
 }
 
 .list-group-item {
@@ -20,4 +21,13 @@
 
 .list-group-item:hover {
   background: lightgray;
+}
+
+.tweetText {
+  margin-top: 15px;
+  margin-left: 34px;
+}
+
+.tweetScreenName {
+  color: #768694;
 }

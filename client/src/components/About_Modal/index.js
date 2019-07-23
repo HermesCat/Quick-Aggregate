@@ -118,7 +118,7 @@ function AboutModal() {
               <h4 className="content-heading-medium">Your keywords make your unique searches more accessible than ever!</h4>
               <p>To use our application, select the social media platform from the "Search-Type" dropdown menu and enter your search into the "Keyword" field. Once you submit the search our application will display the results on the same webpage.
                 We have incorporated a feature that allows the user to save their searches for future use. Users can elect to save certain searches as color-coded buttons and use them to make searches. Users also have the option to delete saved searches.</p>
-              <img src={require('./img/buttonIMG.jpg')} />
+              <img alt="keywords" src={require('./img/buttonIMG.jpg')} />
 
 
 
@@ -166,6 +166,7 @@ function AboutModal() {
             <div className="modal-body">
               <h2 className="content-heading">Our APIs</h2>
               <h4 className="content-heading-medium">Quick Aggregate currently offers three different APIs </h4>
+              <img id="API-Modal_Image" alt="APIs" src={require('./img/ourAPIs.jpg')} />
               <ul>
                 <li className="API-list">Twitter</li>
                 <li className="API-list">News API</li>

@@ -91,3 +91,8 @@
 .API-list {
   font-size: 1.2rem;
 }
+
+#API-Modal_Image {
+  height: 100px;
+  width: auto;
+}

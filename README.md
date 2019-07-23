@@ -1,4 +1,4 @@
-![Logo](https://github.com/HermesCat/Quick-Aggregate/client/public/img/quick-aggregate.png)
+![Logo](https://github.com/HermesCat/Quick-Aggregate/img/quick-aggregate.png)
 # Quick-Aggregate
 A news/media aggregate to quickly search through your favorite media.
 

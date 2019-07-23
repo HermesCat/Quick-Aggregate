@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Powered_By() {
+function PoweredBy() {
   return (
     <>
       <div className="container">
@@ -35,4 +35,4 @@ function Powered_By() {
   );
 }
 
-export default Powered_By;
+export default PoweredBy;

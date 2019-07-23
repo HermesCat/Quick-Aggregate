@@ -49,3 +49,20 @@
 .contact-card {
   margin: 2rem;
 }
+
+.four-oh-four {
+  text-decoration: none;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 3px;
+  background: var(--highlighter-red);
+  color: white;
+  font-size: 1.2rem;
+}
+
+.four-oh-four:hover {
+  color: white;
+  background: grey;
+}
+

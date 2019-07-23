@@ -5,17 +5,17 @@ A news/media aggregate to quickly search through your favorite media.
 **Checkout our application!** (https://quick-aggregate.herokuapp.com/)
 
 ### What is Quick Aggregate?
-Quick Aggregate is a social media aggregate for the user on-the-go! Quick Aggregate allows users to get updates on all of their social media platforms quickly and from a single location. Users will no longer No longer will you have to go from website to website and login to each just stay current on the lastest news. With Quick Aggregate, valuable time is saved using your favorite social media platforms allowing you to squeeze even more productivity from your day! 
+Quick Aggregate is a social media aggregate for the user on-the-go! Quick Aggregate allows users to get updates on all of their social media platforms quickly and from a single location. Rather than jumping from platform to platform, users can keep up-to-date on the latest news and on their personal interests in one place. With Quick Aggregate, users can save valuable time while browsing their favorite social media platforms and squeeze even more productivity from their day!
 
 ### Installation and Use
-No installation is required for use. Simply navigate over to (https://quick-aggregate.herokuapp.com/), create an account with a username and password, and begin browsing your various social media platforms through our application! 
+No installation is required for use. Simply navigate over to (https://quick-aggregate.herokuapp.com/), create an account with a username and password, and begin browsing your various social media platforms through our application!
 
-To use our application, select the social media platfrom from the "Search-Type" dropdown menu and enter your search into the "Keyword" field. Once you submit the search our application will display the results on the same webpage. There is no longer any need to juggle multiple websites across multiple brower tabs or windows. 
+To use our application, select the social media platform from the "Search-Type" dropdown menu and enter your search into the "Keyword" field. Once you submit the search our application will display the results on the same webpage. 
 
-We have incorporate a feature that allows the user to save their searches for future use. Through our application, quick-searching is available, allowing users to stay current through the push of a button. Users also have the option to delete saved searches. 
+We have incorporated a feature that allows the user to save their searches for future use. Users can elect to save certain searches as color-coded buttons and use them to make searches. Users also have the option to delete saved searches.
 
 ### Technologies
-Quick Aggregate was built with React. Express handles our web framework. MongoDB is used in the back-end to store data.
+Quick Aggregate was built with React, Express, Node.js, and MongoDB.
 
 We have integrated the following APIs as proofs of concept:
 
@@ -23,7 +23,7 @@ We have integrated the following APIs as proofs of concept:
 2. News
 3. Recipes
 
-Currently, users are able to search tweets from their favorite celebrities, get the most recent news on events that they've been following, or find that recipe for that delicious meal for their next meal. 
+Currently, users are able to search tweets from their favorite celebrities, get the most recent news on events, or find that recipe for that delicious meal for their next meal.
 
 ### Future Functionality & Observations
 -Form Validation

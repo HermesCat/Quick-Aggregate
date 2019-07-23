@@ -64,7 +64,6 @@ class Home extends Component {
     if (api === "Recipes") {
       API.searchRecipes(search)
         .then(res => {
-          console.log(res);
           let results = res.data.recipes;
 
           results = results.slice(0, 10).map(result => {
@@ -93,7 +92,6 @@ class Home extends Component {
     if (api === "News") {
       API.searchNews(search)
         .then(res => {
-          console.log(res.request.responseURL);
           let articles = res.data.articles;
 
           articles = articles.slice(0, 10).map(article => {
@@ -118,9 +116,7 @@ class Home extends Component {
     if (api === "Twitter") {
       API.searchTwitter(search)
         .then(res => {
-          console.log(res);
           let tweets = res.data;
-          console.log(tweets);
 
           tweets = tweets.slice(0, 10).map(tweet => {
             tweet = {
@@ -133,7 +129,6 @@ class Home extends Component {
               user: tweet.user.id_str,
               screenName: tweet.user.screen_name
             };
-            console.log(tweet);
             return tweet;
           });
           this.setState({
@@ -147,7 +142,7 @@ class Home extends Component {
     }
   };
 
-  handleEdit = event => {
+  handleEdit = () => {
     this.setState({ edit: !this.state.edit });
   };
 
@@ -157,7 +152,6 @@ class Home extends Component {
     if (this.state.mediaSearch === "Recipes") {
       API.searchRecipes(this.state.search)
         .then(res => {
-          console.log(res);
           let results = res.data.recipes;
 
           results = results.slice(0, 10).map(result => {
@@ -190,7 +184,6 @@ class Home extends Component {
     if (this.state.mediaSearch === "News") {
       API.searchNews(this.state.search)
         .then(res => {
-          console.log(res.request.responseURL);
           let articles = res.data.articles;
 
           articles = articles.slice(0, 10).map(article => {
@@ -219,9 +212,7 @@ class Home extends Component {
     if (this.state.mediaSearch === "Twitter") {
       API.searchTwitter(this.state.search)
         .then(res => {
-          console.log(res);
           let tweets = res.data;
-          console.log(tweets);
 
           tweets = tweets.slice(0, 10).map(tweet => {
             tweet = {
@@ -234,7 +225,6 @@ class Home extends Component {
               user: tweet.user.id_str,
               screenName: tweet.user.screen_name
             };
-            console.log(tweet);
             return tweet;
           });
           this.setState({
@@ -244,7 +234,6 @@ class Home extends Component {
             tweets: tweets
           });
           let checkbox = document.getElementById("checkBox");
-          console.log(checkbox.value);
           if (checkbox.checked === true) {
             this.saveSearch();
           }

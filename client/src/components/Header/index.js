@@ -8,6 +8,7 @@ import API from "../../utils/API";
 // There are 2 versions of the header (small screen and desktop), remember this when creaating links and such
 
 class Header extends Component {
+<<<<<<< HEAD
   state = {
     email: "",
     password: "",
@@ -18,6 +19,25 @@ class Header extends Component {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
     const name = event.target.name;
+=======
+    state = {
+        email: "",
+        password: "",
+        isLoggedIn: false,
+        isHidden: true
+    }
+
+    toggleHidden () {
+        this.setState({
+          isHidden: !this.state.isHidden
+        })
+      }
+    
+    handleInputChange = (event) => {
+		// Getting the value and name of the input which triggered the change
+		let value = event.target.value;
+		const name = event.target.name;
+>>>>>>> 40c1910143fe3b0cc53b3ae4bbd023a41ade6245
 
     // Updating the input's state
     this.setState({

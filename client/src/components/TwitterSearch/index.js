@@ -9,7 +9,6 @@ const TwitterSearch = props => {
     <div className="card">
       <div className="article">
         {props.tweets.map(tweet => {
-          console.log(tweet);
           return (
             <li className="search-list list-group-item">
               <a

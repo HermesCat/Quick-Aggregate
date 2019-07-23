@@ -1,6 +1,7 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import "./colors.css";
+<<<<<<< HEAD
 import Home from './pages/Home';
 import About from './pages/About';
 import Register from './pages/Register';
@@ -12,6 +13,16 @@ import Footer from './components/Footer';
 // import Books from "./pages/Books";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+=======
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Register from "./pages/Register";
+import Contact from "./pages/Contact";
+import PageWrapper from "./components/Page-Wrapper";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+>>>>>>> 40c1910143fe3b0cc53b3ae4bbd023a41ade6245
 
 function App() {
   return (

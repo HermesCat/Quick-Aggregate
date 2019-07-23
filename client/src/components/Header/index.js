@@ -8,23 +8,23 @@ import API from "../../utils/API";
 // There are 2 versions of the header (small screen and desktop), remember this when creaating links and such
 
 class Header extends Component {
-    state = {
-        email: "",
-        password: "",
-        isLoggedIn: false,
-        isHidden: true
-    }
+  state = {
+    email: "",
+    password: "",
+    isLoggedIn: false,
+    isHidden: true
+  }
 
-    toggleHidden () {
-        this.setState({
-          isHidden: !this.state.isHidden
-        })
-      }
-    
-    handleInputChange = (event) => {
-		// Getting the value and name of the input which triggered the change
-		let value = event.target.value;
-		const name = event.target.name;
+  toggleHidden() {
+    this.setState({
+      isHidden: !this.state.isHidden
+    })
+  }
+
+  handleInputChange = (event) => {
+    // Getting the value and name of the input which triggered the change
+    let value = event.target.value;
+    const name = event.target.name;
 
     // Updating the input's state
     this.setState({
@@ -63,8 +63,8 @@ class Header extends Component {
             </div>
             <div className="col-3" />
             <div className="col-3 navigation">
-              <a className="d-lg-none ">
-                <img className="hamburger-icon" src={HamburgerIcon} />
+              <a className="d-lg-none " href="#">
+                <img className="hamburger-icon" alt="menu-icon" src={HamburgerIcon} />
               </a>
               <Router>
                 <>
@@ -100,29 +100,29 @@ class Header extends Component {
           </div>
         </header>
         <div
-          class="modal fade"
+          className="modal fade"
           id="loginModal"
-          tabindex="-1"
+          tabndex="-1"
           role="dialog"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog login-modal-size" role="document">
-            <div class="modal-content">
-              <div class="modal-header modal-header-about">
+          <div className="modal-dialog login-modal-size" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
                 <h5 className="modal-title main-title-modal">
                   <span className="highligher-modal">Quick</span>Aggregate
                 </h5>
                 <button
                   type="button"
-                  class="close"
+                  className="close"
                   data-dismiss="modal"
                   aria-label="Close"
                 >
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 <h4>Email</h4>
                 <input
                   className="user-login-input"
@@ -142,7 +142,7 @@ class Header extends Component {
                   name="password"
                 />
               </div>
-              <div class="modal-footer modal-footer-about">
+              <div className="modal-footer modal-footer-about">
                 <div className="row">
                   <button
                     onClick={this.handleFormSubmit}

@@ -6,54 +6,54 @@ const TwitterSearch = props => {
   return props.tweets.length === 0 ? (
     <div />
   ) : (
-    <div className="card">
-      <div className="article">
-        {props.tweets.map(tweet => {
-          return (
-            <li className="search-list list-group-item">
-              <a
-                href={`https://twitter.com/${tweet.user}/status/${tweet.id}`}
-                className="tweetLink"
-                target="_blank"
-              >
-                <Row
-                  className="SearchResult row"
-                  id={tweet.name + "Card"}
-                  key={tweet.id}
+      <div className="card">
+        <div className="article">
+          {props.tweets.map(tweet => {
+            return (
+              <li className="search-list list-group-item">
+                <a
+                  href={`https://twitter.com/${tweet.user}/status/${tweet.id}`}
+                  className="tweetLink"
+                  target="_blank"
                 >
-                  <Row>
-                  <Col size="2">
-                    <img
-                      className="tweetImage"
-                      src={tweet.image}
-                      alt={tweet.name}
-                    />
-                  </Col>
-
-                  <Col size="8" className="tweetInfo">
+                  <Row
+                    className="SearchResult row"
+                    id={tweet.name + "Card"}
+                    key={tweet.id}
+                  >
                     <Row>
-                      <h3 className="tweetName">{tweet.name}</h3>
-                    </Row>
-                    <Row>
-                      <h5 className="tweetScreenName">@{tweet.screenName}</h5>
-                    </Row>
-                
-                    </Col>
-                  
-                    <Row>
-                      <Col size="11">
-                      
-                      <h5 className="tweetText">{tweet.text}</h5>
+                      <Col size="2">
+                        <img
+                          className="tweetImage"
+                          src={tweet.image}
+                          alt={tweet.name}
+                        />
                       </Col>
+
+                      <Col size="8" className="tweetInfo">
+                        <Row>
+                          <h3 className="tweetName">{tweet.name}</h3>
+                        </Row>
+                        <Row>
+                          <h5 className="tweetScreenName">@{tweet.screenName}</h5>
+                        </Row>
+
+                      </Col>
+
+                      <Row>
+                        <Col size="11">
+
+                          <h5 className="tweetText">{tweet.text}</h5>
+                        </Col>
+                      </Row>
                     </Row>
                   </Row>
-                </Row>
-              </a>
-            </li>
-          );
-        })}
+                </a>
+              </li>
+            );
+          })}
+        </div>
       </div>
-    </div>
-  );
+    );
 };
 export default TwitterSearch;

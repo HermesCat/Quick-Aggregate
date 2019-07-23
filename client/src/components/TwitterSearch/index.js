@@ -21,7 +21,6 @@ const TwitterSearch = props => {
                   id={tweet.name + "Card"}
                   key={tweet.id}
                 >
-                  <Row>
                   <Col size="2">
                     <img
                       className="tweetImage"
@@ -35,18 +34,12 @@ const TwitterSearch = props => {
                       <h3 className="tweetName">{tweet.name}</h3>
                     </Row>
                     <Row>
-                      <h5 className="tweetScreenName">@{tweet.screenName}</h5>
+                      <h4 className="tweetScreenName">@{tweet.screenName}</h4>
                     </Row>
-                
-                    </Col>
-                  
                     <Row>
-                      <Col size="11">
-                      
                       <h5 className="tweetText">{tweet.text}</h5>
-                      </Col>
                     </Row>
-                  </Row>
+                  </Col>
                 </Row>
               </a>
             </li>

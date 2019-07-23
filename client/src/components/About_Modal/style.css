@@ -1,5 +1,5 @@
 .about1 {
-  background-image: url(./img/qa_computer.jpg);
+  background-image: url(./img/ComputerIMG.jpg);
   background-repeat: no-repeat;
   background-size: 35rem;
   background-position-x: -7.5rem;
@@ -65,7 +65,7 @@
 .highligher-modal {
   background-image: var(--highlighter-red);
   padding: 0.5rem;
-  margin-left: 3rem;
+  margin-left:1rem;
   border-radius: 0.5rem;
   color: rgb(235, 228, 228);
 }
@@ -74,10 +74,20 @@
   min-width: 50%;
 }
 
-.modal-header {
-  background: var(--main-white);
+.modal-about {
+  background-image: linear-gradient(to right, #FFFFFF, rgb(247, 244, 241));
 }
 
-.modal-footer-about {
-  background: var(--main-white);
+.content-heading {
+  margin-bottom: 1rem;
+  color: rgb(22, 22, 22);
+}
+
+.content-heading-medium {
+  margin-bottom: .5rem;
+  color: rgb(97, 97, 97);
+}
+
+.API-list {
+  font-size: 1.2rem;
 }

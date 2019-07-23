@@ -34,3 +34,7 @@
 .tweetText {
   color: rgb(36, 33, 33);
 }
+
+.list-group-item {
+  overflow: hidden;
+}

@@ -5,7 +5,7 @@ A news/media aggregate to quickly search through your favorite media.
 **Checkout our application!** (https://quick-aggregate.herokuapp.com/)
 
 ### What is Quick Aggregate?
-Quick Aggregate is the social media aggregating website for the user on-the-go! Quick Aggregate allows its users to get updates on all of their social media platforms quickly and from a single location. No longer will you have to go from website to website and login to each just stay current on the lastest news. With Quick Aggregate, valuable time is saved using your favorite social media platforms allowing you to squeeze even more productivity from your day! 
+Quick Aggregate is a social media aggregate for the user on-the-go! Quick Aggregate allows users to get updates on all of their social media platforms quickly and from a single location. Users will no longer No longer will you have to go from website to website and login to each just stay current on the lastest news. With Quick Aggregate, valuable time is saved using your favorite social media platforms allowing you to squeeze even more productivity from your day! 
 
 ### Installation and Use
 No installation is required for use. Simply navigate over to (https://quick-aggregate.herokuapp.com/), create an account with a username and password, and begin browsing your various social media platforms through our application! 

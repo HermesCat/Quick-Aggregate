@@ -11,21 +11,20 @@ class Header extends Component {
   state = {
     email: "",
     password: "",
-        isLoggedIn: false,
-        isHidden: true
-    }
+    isLoggedIn: false,
+    isHidden: true
+  }
 
-    toggleHidden () {
-        this.setState({
-          isHidden: !this.state.isHidden
-        })
-      }
-    
-    handleInputChange = (event) => {
-		// Getting the value and name of the input which triggered the change
-		let value = event.target.value;
-		const name = event.target.name;
->>>>>>> 40c1910143fe3b0cc53b3ae4bbd023a41ade6245
+  toggleHidden() {
+    this.setState({
+      isHidden: !this.state.isHidden
+    })
+  }
+
+  handleInputChange = (event) => {
+    // Getting the value and name of the input which triggered the change
+    let value = event.target.value;
+    const name = event.target.name;
 
     // Updating the input's state
     this.setState({

@@ -1,7 +1,7 @@
 footer {
   min-height: 5%;
   overflow: auto;
-  background: var(--main-white);
+  background-image: var(--main-white);
   padding-top: 10px;
   text-align: center;
   border-top: red solid 0.2rem;

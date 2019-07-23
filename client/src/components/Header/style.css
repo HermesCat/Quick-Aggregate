@@ -3,7 +3,7 @@ header {
   padding-bottom: 0.3rem;
   width: 100%;
   height: 5rem;
-  background: var(--main-white);
+  background-image: var(--main-white);
   border-bottom: red solid 0.2rem;
   margin-bottom: 3rem;
 }

@@ -21,3 +21,20 @@
 .list-group-item:hover {
   background: lightgray;
 }
+
+.tweetName {
+  font-size: 2rem;
+}
+
+.tweetScreenName {
+  font-size: 1.2rem;
+  color: grey;
+}
+
+.tweetText {
+  color: rgb(36, 33, 33);
+}
+
+.list-group-item {
+  overflow: hidden;
+}

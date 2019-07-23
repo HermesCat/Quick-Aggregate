@@ -1,10 +1,11 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import "./colors.css";
 import Home from './pages/Home';
 import About from './pages/About';
-import Register from './pages/Register'
-import Contact from './pages/Contact'
+import Register from './pages/Register';
+import Contact from './pages/Contact';
+import FourOhFour from './pages/404';
 import PageWrapper from './components/Page-Wrapper';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -23,6 +24,7 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="" component={FourOhFour} />
           </Switch>
         </PageWrapper>
         <Footer />

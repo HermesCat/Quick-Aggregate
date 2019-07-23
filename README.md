@@ -1,4 +1,4 @@
-#![quick-aggregate](https://user-images.githubusercontent.com/46881872/61678065-cb44c400-accf-11e9-80cc-55083c1d55af.PNG)
+![quick-aggregate](https://user-images.githubusercontent.com/46881872/61678065-cb44c400-accf-11e9-80cc-55083c1d55af.PNG)
 
 A news/media aggregate to quickly search through your favorite media.
 

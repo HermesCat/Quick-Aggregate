@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
 import { Row, Col } from "../Grid";
-
 const TwitterSearch = props => {
   return props.tweets.length === 0 ? (
     <div />
@@ -21,32 +20,24 @@ const TwitterSearch = props => {
                     id={tweet.name + "Card"}
                     key={tweet.id}
                   >
-                    <Row>
-                      <Col size="2">
-                        <img
-                          className="tweetImage"
-                          src={tweet.image}
-                          alt={tweet.name}
-                        />
-                      </Col>
-
-                      <Col size="8" className="tweetInfo">
-                        <Row>
-                          <h3 className="tweetName">{tweet.name}</h3>
-                        </Row>
-                        <Row>
-                          <h5 className="tweetScreenName">@{tweet.screenName}</h5>
-                        </Row>
-
-                      </Col>
-
+                    <Col size="2">
+                      <img
+                        className="tweetImage"
+                        src={tweet.image}
+                        alt={tweet.name}
+                      />
+                    </Col>
+                    <Col size="8" className="tweetInfo">
                       <Row>
-                        <Col size="11">
-
-                          <h5 className="tweetText">{tweet.text}</h5>
-                        </Col>
+                        <h3 className="tweetName">{tweet.name}</h3>
                       </Row>
-                    </Row>
+                      <Row>
+                        <h4 className="tweetScreenName">@{tweet.screenName}</h4>
+                      </Row>
+                      <Row>
+                        <h5 className="tweetText">{tweet.text}</h5>
+                      </Row>
+                    </Col>
                   </Row>
                 </a>
               </li>

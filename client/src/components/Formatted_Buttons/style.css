@@ -24,10 +24,10 @@
   font-weight: bold;
   position: relative;
   top: 0;
-  right: 25px;
-  top: -15px;
-  font-family: "Concert One", cursive;
-  font-size: 28px;
+  right: 18px;
+  top: -18px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 22px;
   color: rgb(233, 10, 10);
   cursor: pointer;
 }

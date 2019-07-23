@@ -5,6 +5,6 @@
     --card-white: linear-gradient(to right, #FFFFFF, rgb(247, 244, 241)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     --card-grey: linear-gradient(to right, rgb(204, 194, 194), rgb(187, 175, 175));
     --twitter-blue: linear-gradient( #38A1F3, rgb(38, 135, 209));
-    --recipe-green: linear-gradient(  #2ECC40, rgb(41, 194, 58));
+    --recipe-green: linear-gradient(  #2ECC40, rgb(35, 182, 52));
     --news-black: linear-gradient(  rgb(80, 9, 80), rgb(27, 3, 27));
 }

@@ -11,6 +11,7 @@
 .recipeImage {
   height: 200px;
   width: 200px;
+  border-radius: 2em;
 }
 
 .list-group-item {

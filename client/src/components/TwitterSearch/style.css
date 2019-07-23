@@ -9,9 +9,10 @@
 }
 
 .tweetImage {
-  height: 75px;
-  width: 75px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
+  margin-left: 20px;
 }
 
 .list-group-item {
@@ -33,4 +34,6 @@
 
 .tweetText {
   color: rgb(36, 33, 33);
+  margin-top: 15px;
+  margin-left: 33px;
 }

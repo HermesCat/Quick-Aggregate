@@ -8,17 +8,19 @@ import API from "../../utils/API";
 // There are 2 versions of the header (small screen and desktop), remember this when creaating links and such
 
 class Header extends Component {
-    state = {
-        email: "",
-        password: "",
-        isLoggedIn: false,
-        isHidden: true
+    constructor(props) {
+      super(props);
+        this.state = {
+          email: "",
+          password: "",
+          isLoggedIn: false,
+          isHidden: true
+        }
+        this.toggleHidden = this.toggleHidden.bind(this);
     }
 
     toggleHidden () {
-        this.setState({
-          isHidden: !this.state.isHidden
-        })
+        this.setState(prevState => ({isHidden: !prevState.isHidden}))
       }
     
     handleInputChange = (event) => {
@@ -70,14 +72,15 @@ class Header extends Component {
                 <>
                   <Nav />
                   <div className="row  button-list">
-                    <div className="col-12">
+                    <div className="col-12">          
                       <button
+                        onClick={this.toggleHidden}
                         type="button"
-                        className="login-button-style login"
+                        className="login-button-style login "
                         data-toggle="modal"
                         data-target="#loginModal"
                       >
-                        Login
+                        {this.state.isHidden ? "Login" : "Logoff"}
                       </button>
                       <a href="/register">
                         <button
@@ -147,6 +150,7 @@ class Header extends Component {
                   <button
                     onClick={this.handleFormSubmit}
                     className="login-button-style login"
+                    data-dismiss="modal"
                   >
                     Submit
                   </button>

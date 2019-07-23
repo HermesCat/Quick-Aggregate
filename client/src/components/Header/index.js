@@ -8,21 +8,9 @@ import API from "../../utils/API";
 // There are 2 versions of the header (small screen and desktop), remember this when creaating links and such
 
 class Header extends Component {
-<<<<<<< HEAD
   state = {
     email: "",
     password: "",
-    isLoggedIn: false
-  };
-
-  handleInputChange = event => {
-    // Getting the value and name of the input which triggered the change
-    let value = event.target.value;
-    const name = event.target.name;
-=======
-    state = {
-        email: "",
-        password: "",
         isLoggedIn: false,
         isHidden: true
     }

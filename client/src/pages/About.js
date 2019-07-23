@@ -1,6 +1,9 @@
 import React from "react";
-import About_Modal from "../components/About_Modal";
-import Powered_By from "../components/Powered_By";
+import AboutModal from "../components/About_Modal";
+import PoweredBy from "../components/Powered_By";
+import "./style.css";
+
+
 
 function About() {
   return (
@@ -9,11 +12,11 @@ function About() {
         <div className="row">
           <h3 className="page-title">About: </h3>
         </div>
-        <About_Modal />
+        <AboutModal />
         <div className="row">
           <h3 className="page-title">Powered By: </h3>
         </div>
-        <Powered_By />
+        <PoweredBy />
       </div>
     </>
   );

@@ -13,18 +13,15 @@ function Contact() {
                 <div className="card-body">
                   <h5 className="card-title">John Pettis</h5>
                   <h6 className="card-subtitle mb-2 text-muted">
-                    Card subtitle
+                    Front-End
                   </h6>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </p>
-                  <a href="#" className="card-link">
-                    Card link
+                  <a href="https://github.com/HermesCat" className="card-link">
+                    GitHub
                   </a>
-                  <a href="#" className="card-link">
-                    Another link
-                  </a>
+
                 </div>
               </div>
             </div>
@@ -33,17 +30,13 @@ function Contact() {
                 <div className="card-body">
                   <h5 className="card-title">Tyler Lewis</h5>
                   <h6 className="card-subtitle mb-2 text-muted">
-                    Card subtitle
+                    Front-End
                   </h6>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </p>
-                  <a href="#" className="card-link">
-                    Card link
-                  </a>
-                  <a href="#" className="card-link">
-                    Another link
+                  <a href="https://github.com/GrimbleLewis" className="card-link">
+                    GitHub
                   </a>
                 </div>
               </div>
@@ -55,17 +48,13 @@ function Contact() {
                 <div className="card-body">
                   <h5 className="card-title">William Wood</h5>
                   <h6 className="card-subtitle mb-2 text-muted">
-                    Card subtitle
+                    Back-End
                   </h6>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </p>
-                  <a href="#" className="card-link">
-                    Card link
-                  </a>
-                  <a href="#" className="card-link">
-                    Another link
+                  <a href="https://github.com/twood17" className="card-link">
+                    GitHub
                   </a>
                 </div>
               </div>
@@ -75,17 +64,13 @@ function Contact() {
                 <div className="card-body">
                   <h5 className="card-title">Greg Chu</h5>
                   <h6 className="card-subtitle mb-2 text-muted">
-                    Card subtitle
+                    Front-End
                   </h6>
                   <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+
                   </p>
-                  <a href="#" className="card-link">
-                    Card link
-                  </a>
-                  <a href="#" className="card-link">
-                    Another link
+                  <a href="https://github.com/GC0728" className="card-link">
+                    GitHub
                   </a>
                 </div>
               </div>

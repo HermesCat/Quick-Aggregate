@@ -1,14 +1,17 @@
 import React from "react";
 import "./App.css";
 import "./colors.css";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Register from "./pages/Register";
-import Contact from "./pages/Contact";
-import PageWrapper from "./components/Page-Wrapper";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from './pages/Home';
+import About from './pages/About';
+import Register from './pages/Register';
+import Contact from './pages/Contact';
+import FourOhFour from './pages/404';
+import PageWrapper from './components/Page-Wrapper';
+import Header from './components/Header';
+import Footer from './components/Footer';
+// import Books from "./pages/Books";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -21,6 +24,7 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="" component={FourOhFour} />
           </Switch>
         </PageWrapper>
         <Footer />

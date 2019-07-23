@@ -84,7 +84,7 @@
 }
 
 .content-heading-medium {
-  margin-bottom: .5rem;
+  margin-bottom: 1.9rem;
   color: rgb(97, 97, 97);
 }
 
@@ -95,4 +95,8 @@
 #API-Modal_Image {
   height: 100px;
   width: auto;
+}
+
+.modal-body p {
+  font-size: 1.7rem;
 }

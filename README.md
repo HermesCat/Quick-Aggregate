@@ -14,6 +14,8 @@ To use our application, select the social media platform from the "Search-Type" 
 
 We have incorporated a feature that allows the user to save their searches for future use. Users can elect to save certain searches as color-coded buttons and use them to make searches. Users also have the option to delete saved searches.
 
+![MySearches](https://user-images.githubusercontent.com/46881872/61680175-a273fd00-acd6-11e9-9d72-fb7836886d20.jpg)
+
 ### Technologies
 Quick Aggregate was built with React, Express, Node.js, and MongoDB.
 

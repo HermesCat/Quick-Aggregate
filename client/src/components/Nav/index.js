@@ -4,7 +4,7 @@ import "./style.css";
 function Nav() {
   return (
     <>
-      <ul className="nav justify-content-end d-lg-block">
+      <ul className="nav justify-content-end d-none d-lg-block">
         <li className="nav-item">
           <a className="nav-link" href="/">
             HOME

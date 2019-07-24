@@ -383,7 +383,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-7 d-none d-lg-block">
+          <div className="col-lg-7">
             <div id="accordion">
               <div className="card" id="accordion4">
                 <div className="card-header" id="heading4">
@@ -414,8 +414,8 @@ class Home extends Component {
                         <TwitterSearch tweets={this.state.tweets} />
                       </React.Fragment>
                     ) : (
-                      <Blank_Search />
-                    )}
+                        <Blank_Search />
+                      )}
                   </div>
                 </div>
               </div>

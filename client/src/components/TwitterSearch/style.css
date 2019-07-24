@@ -38,3 +38,20 @@
 .list-group-item {
   overflow: hidden;
 }
+
+/* this is the iPad landscape mode */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+ {
+  .tweetImage {
+    padding-right: 5px;
+  }
+  .tweetName {
+    font-size: 1.5rem;
+  }
+  .tweetScreenName {
+    font-size: 1rem;
+  }
+
+ }

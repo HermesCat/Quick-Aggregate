@@ -87,14 +87,14 @@ cursor: pointer;
 }
 
 
-
+/* --ipad portrait------------------------------------ */
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
  {
   .dropdown-menu {
     width: 300px !important;
-    height: 300px !important;
+    height: 320px !important;
     background: rgb(245, 243, 243);
   }
   .dropdown-item {
@@ -103,19 +103,6 @@ and (max-device-width : 1024px)
     font-family: "Lato", sans-serif;
     font-weight: bold;
     color: rgb(231, 6, 6);
-  }
-
- }
-
-
-@media only screen and (min-width: 600px) {
-  header {
-    height: 8rem;
-  }
-  .main-title {
-    padding-top: 0.5rem;
-    margin-left: 0.5rem;
-    font-size: 2.8rem;
   }
   .login-modal-content {
     height: 400px;
@@ -131,6 +118,48 @@ and (max-device-width : 1024px)
   }
   .user-login-input {
     font-size: 1.3rem
+  }
+  #login-dropdown {
+    text-decoration: none;
+    border: none;
+    display: inline;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    background: var(--highlighter-red);
+    color: white;
+    margin-left: 29px;
+    margin-top: 4px;
+    font-size: 24px;
+  }
+  #sign-up-dropdown {
+    text-decoration: none;
+    border: none;
+    display: inline;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    margin: 3px;
+    background: var(--main-grey);
+    color: black;
+    margin-top: 6px;
+    margin-left: 29px;
+    font-size: 24px;
+  }
+  .drop-down-button-a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+ }
+
+
+@media only screen and (min-width: 600px) {
+  header {
+    height: 8rem;
+  }
+  .main-title {
+    padding-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 2.8rem;
   }
 }
 

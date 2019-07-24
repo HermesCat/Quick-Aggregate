@@ -73,9 +73,13 @@ class Header extends Component {
                       <a className="dropdown-item" href="/about" >ABOUT</a>
                       <a className="dropdown-item" href="/contact" >CONTACT</a>
                       <div class="dropdown-divider"></div>
-                      <button className="dropdown-item" data-toggle="modal"
-                        data-target="#loginModal" >Login</button>
-                      <a className="dropdown-item" href="/register" >Sign-Up</a>
+                      <div className="row">
+                        <button id="login-dropdown" data-toggle="modal"
+                          data-target="#loginModal" >Login</button>
+                      </div>
+                      <div className="row">
+                        <a className="drop-down-button-a" href="/register"><button id="sign-up-dropdown" >Sign-Up</button> </a>
+                      </div>
                     </div>
                   </div>
                   <Nav />

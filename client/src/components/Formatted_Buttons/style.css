@@ -70,6 +70,9 @@ and (max-device-width : 1024px)
 
   .button-delete {
     touch-action: manipulation;
+    font-size: 25px;
+    font-weight: bolder;
+    top: -17px;
   }
 
  }

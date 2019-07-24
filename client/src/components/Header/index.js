@@ -63,13 +63,27 @@ class Header extends Component {
             </div>
             <div className="col-3" />
             <div className="col-3 navigation">
-              <a className="d-lg-none " href="#">
-                <img className="hamburger-icon" alt="menu-icon" src={HamburgerIcon} />
-              </a>
+
               <Router>
                 <>
+                  <div className="btn-group d-lg-none mobile-dropdown">
+                    <img type="" className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="hamburger-icon" alt="menu-icon" src={HamburgerIcon} />
+                    <div className="dropdown-menu dropdown-menu-right">
+                      <a className="dropdown-item" href="/" >HOME</a>
+                      <a className="dropdown-item" href="/about" >ABOUT</a>
+                      <a className="dropdown-item" href="/contact" >CONTACT</a>
+                      <div class="dropdown-divider"></div>
+                      <div className="row">
+                        <button id="login-dropdown" data-toggle="modal"
+                          data-target="#loginModal" >Login</button>
+                      </div>
+                      <div className="row">
+                        <a className="drop-down-button-a" href="/register"><button id="sign-up-dropdown" >Sign-Up</button> </a>
+                      </div>
+                    </div>
+                  </div>
                   <Nav />
-                  <div className="row  button-list">
+                  <div className="row  button-list d-none d-lg-block">
                     <div className="col-12">
                       <button
                         type="button"
@@ -108,7 +122,7 @@ class Header extends Component {
           aria-hidden="true"
         >
           <div className="modal-dialog login-modal-size" role="document">
-            <div className="modal-content">
+            <div className="modal-content login-modal-content">
               <div className="modal-header">
                 <h5 className="modal-title main-title-modal">
                   <span className="highligher-modal">Quick</span>Aggregate
@@ -123,7 +137,7 @@ class Header extends Component {
                 </button>
               </div>
               <div className="modal-body">
-                <h4>Email</h4>
+                <h4 className="input-heading" >Email</h4>
                 <input
                   className="user-login-input"
                   type="email"
@@ -132,7 +146,7 @@ class Header extends Component {
                   placeholder="Email Adress"
                   name="email"
                 />
-                <h4>Password</h4>
+                <h4 className="input-heading">Password</h4>
                 <input
                   className="user-password-input"
                   password="password"

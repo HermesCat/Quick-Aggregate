@@ -98,5 +98,55 @@
 }
 
 .modal-body p {
-  font-size: 1.7rem;
+  font-size: 1.2rem;
 }
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+ {
+   .modal-image {
+    width: 17rem;
+    height: 17rem;
+   }
+
+   .image-hover {
+    width: 17rem;
+    height: 17rem;
+   }
+   .modal-image-stripe {
+    margin-top: 13rem;
+   }
+
+  .about1 {
+    margin: 0 auto;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-bottom: 15px;;
+  }
+  .about2 {
+    margin: 0 auto;
+  }
+  .about3 {
+    margin: 0 auto;
+    background-size: 29.5rem;
+    background-position-x: -7.7rem;
+    background-position-y: -2.3rem;
+  }
+  .about-strip {
+    width: 100%;
+  }
+  .content-heading-medium {
+    margin-bottom: .8rem;
+  }
+  .modal {
+    text-align: left;
+  }
+  .modal-body p {
+    font-size: 1.2rem;
+  }
+  .button-image {
+    height: 175px;
+    width: auto
+  }
+ }

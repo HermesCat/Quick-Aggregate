@@ -59,8 +59,9 @@ header {
   width: 3rem;
   margin: 0;
   margin-left: 0;
-  position: absolute;
-  left: 45px;
+  position: relative;
+  left: 5rem;
+  top: 1.1rem;
 }
 
 .navigation {
@@ -81,6 +82,32 @@ header {
   padding-left: 2px;
 }
 
+.mobile-dropdown:hover {
+cursor: pointer;
+}
+
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+ {
+  .dropdown-menu {
+    width: 300px !important;
+    height: 300px !important;
+    background: rgb(245, 243, 243);
+  }
+  .dropdown-item {
+    font-size: 30px;
+    margin-right: 100px;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    color: rgb(231, 6, 6);
+  }
+
+ }
+
+
 @media only screen and (min-width: 600px) {
   header {
     height: 8rem;
@@ -90,4 +117,20 @@ header {
     margin-left: 0.5rem;
     font-size: 2.8rem;
   }
+  .login-modal-content {
+    height: 400px;
+  }
+
+  .input-heading {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  .user-password-input {
+    font-size: 1.3rem
+  }
+  .user-login-input {
+    font-size: 1.3rem
+  }
 }
+

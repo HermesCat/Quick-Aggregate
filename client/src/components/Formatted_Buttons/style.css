@@ -59,3 +59,17 @@
 .Twitter-buttons:hover {
   background: grey;
 }
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+ {
+  .user-keyword {
+    touch-action: manipulation;
+  }
+
+  .button-delete {
+    touch-action: manipulation;
+  }
+
+ }

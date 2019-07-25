@@ -132,16 +132,20 @@ and (max-device-width : 1024px)
    .image-hover {
     width: 17rem;
     height: 17rem;
+    border-radius: 1em;
+    right: 5px;
+    top: -0;
+    touch-action: none;
    }
    .modal-image-stripe {
     margin-top: 13rem;
+    background-size: 22px 13rem;
    }
 
   .about1 {
-    text-decoration: none;
     margin: 0 auto;
-    margin-bottom: 15px;
     touch-action: none;
+    margin-bottom: 15px;
   }
   .about2 {
     margin: 0 auto;
@@ -170,8 +174,5 @@ and (max-device-width : 1024px)
     height: 175px;
     width: auto
   }
-  .image-hover {
-    touch-action: none;
-    cursor: auto;
-  }
+
  }

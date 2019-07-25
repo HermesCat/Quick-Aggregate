@@ -12,7 +12,7 @@ function AboutModal() {
           data-target="#modal1"
           className="modal-image about1"
         >
-          <div className=" wrapper image-hover  about-strip">
+          <div className=" wrapper image-hover">
             <h4 className="modal-image-stripe">About Quick Aggregate</h4>
           </div>
         </button>

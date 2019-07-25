@@ -6,9 +6,21 @@
   text-decoration: none;
   background-image: var(--highlighter-red);
   color: white;
+  margin-bottom: 10px;
 }
 
 .btn-search:hover {
   background: grey;
   color: white;
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+{
+  .btn-search {
+    margin: 0;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
 }

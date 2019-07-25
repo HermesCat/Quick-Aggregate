@@ -47,6 +47,9 @@
 
 .image-hover {
   margin: 0;
+  position: relative;
+  right: 6px;
+  top: -1px;
   width: 19.5rem;
   height: 19.5rem;
   border-radius: 1em;

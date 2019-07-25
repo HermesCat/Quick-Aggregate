@@ -70,6 +70,7 @@
   background: grey;
 }
 
+/* ----ipad ------------------*/
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
@@ -91,3 +92,22 @@ and (max-device-width : 1024px)
     margin-left: 3px;
   }
  }
+
+ /*-- iphone x---------------------------------- */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+  .form-check{
+    display: inline;
+   }
+  .form-check-input {
+    width: 18px;
+    height: 18px;
+    touch-action: manipulation;
+  }
+  .form-check-label {
+    margin-left: 3px;
+    font-size: 16px;
+  }
+}

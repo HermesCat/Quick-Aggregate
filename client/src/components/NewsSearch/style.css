@@ -14,7 +14,7 @@
   color: #212529;
 }
 
-/* this is the iPad landscape mode */
+/* this is the iPad mode */
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
@@ -26,3 +26,26 @@ and (max-device-width : 1024px)
   }
 
  }
+
+  /*-- iphone x---------------------------------- */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+  .articleImage {
+    height: 75px;
+    width: 75px;
+    border-radius: 1em;
+  }
+  .articleTitle {
+    font-size: 15px;
+    margin-left: 20px;
+  }
+  .articleCaption {
+    font-size: 15px;
+    margin: 0;
+  }
+  .article {
+    overflow: none;
+  }
+}

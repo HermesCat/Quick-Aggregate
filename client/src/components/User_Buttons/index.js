@@ -11,7 +11,7 @@ function User_Buttons(props) {
         <div className="col-9">
           <h4>Your Keywords: </h4>
         </div>
-        <div className="col-3">
+        <div className="col-3 col-xs-8-push">
           <p
             id="edit_button_click"
             onClick={props.handleEdit}

@@ -248,6 +248,10 @@ and (min-device-width : 375px)
 and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3) 
 {
+  header {
+    padding-top: 0.4rem;
+    padding-bottom: 0.3rem;
+  }
   .hamburger-icon {
     height: 2.7rem;
     width: 2.7rem;

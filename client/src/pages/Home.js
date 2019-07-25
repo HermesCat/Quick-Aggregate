@@ -270,8 +270,8 @@ class Home extends Component {
                       aria-expanded="true"
                       aria-controls="collapseOne"
                     >
-                      <div className="row">
-                        <h3>My Searches</h3>
+                      <div className="row collapse-headline">
+                        <h3 >My Searches</h3>
                       </div>
                     </button>
                   </h5>
@@ -309,7 +309,7 @@ class Home extends Component {
                       aria-expanded="true"
                       aria-controls="collapseTwo"
                     >
-                      <div className="row">
+                      <div className="row collapse-headline">
                         <h3>New Search</h3>
                       </div>
                     </button>
@@ -395,7 +395,9 @@ class Home extends Component {
                       aria-expanded="true"
                       aria-controls="collapse4"
                     >
-                      <h3>Search Results</h3>
+                      <div className="row collapse-headline">
+                        <h3>Search Results</h3>
+                      </div>
                     </button>
                   </h5>
                 </div>

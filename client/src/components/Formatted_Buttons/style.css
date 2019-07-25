@@ -85,6 +85,9 @@ and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3) 
 {
   .user-keyword {
+    touch-action: manipulation;
+  }
+  .user-keyword {
     border: none;
     margin: 4px;
     font-size: 13px;

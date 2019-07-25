@@ -5,7 +5,7 @@ import "./img/buttonIMG.jpg";
 function AboutModal() {
   return (
     <>
-      <div className="row">
+      <div className="row info-modal-row">
         <div
           type="card"
           className="modal-image about1"

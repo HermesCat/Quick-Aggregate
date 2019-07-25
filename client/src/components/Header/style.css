@@ -92,6 +92,13 @@ cursor: pointer;
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
  {
+.button-list {
+  display: none;
+}
+
+.mobile-dropdown {
+    display: block;
+  }
   .dropdown-menu {
     width: 300px !important;
     height: 320px !important;
@@ -163,3 +170,74 @@ and (max-device-width : 1024px)
   }
 }
 
+@media only screen and (max-width: 1025px) {
+  .login-button-style {
+    display: none;
+  }
+  
+  .mobile-dropdown {
+      display: block;
+  }
+  #login-dropdown {
+    text-decoration: none;
+    border: none;
+    display: inline;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    background: var(--highlighter-red);
+    color: white;
+    margin-left: 29px;
+    margin-top: 4px;
+    font-size: 24px;
+  }
+  #sign-up-dropdown {
+    text-decoration: none;
+    border: none;
+    display: inline;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    margin: 3px;
+    background: var(--main-grey);
+    color: black;
+    margin-top: 6px;
+    margin-left: 29px;
+    font-size: 24px;
+  }
+  .dropdown-menu {
+    width: 300px !important;
+    height: 320px !important;
+    background: rgb(245, 243, 243);
+  }
+  .dropdown-item {
+    font-size: 30px;
+    margin-right: 100px;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    color: rgb(231, 6, 6);
+  }
+  .login-modal-content {
+    height: 400px;
+  }
+
+  .input-heading {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  .user-password-input {
+    font-size: 1.3rem
+  }
+  .user-login-input {
+    font-size: 1.3rem
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .login-button-style {
+    display: inline-block;
+  }
+  
+  .mobile-dropdown {
+      display: none;
+  }
+}

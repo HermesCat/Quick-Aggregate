@@ -123,7 +123,7 @@ and (max-device-width : 1024px)
     width: 17rem;
     height: 17rem;
    pointer-events: none;
-    touch-action: none;
+    touch-action: manipulation;
    }
 
    .image-hover {
@@ -139,12 +139,12 @@ and (max-device-width : 1024px)
     margin: 0 auto;
     margin-bottom: 15px;
    pointer-events: none;
-    touch-action: none;
+    touch-action: manipulation;
   }
   .about2 {
     margin: 0 auto;
    pointer-events: none;
-    touch-action: none;
+    touch-action: manipulation;
   }
   .about3 {
     margin: 0 auto;
@@ -152,7 +152,7 @@ and (max-device-width : 1024px)
     background-position-x: -7.7rem;
     background-position-y: -2.3rem;
    pointer-events: none;
-    touch-action: none;
+    touch-action: manipulation;
   }
   .about-strip {
     width: 100%;

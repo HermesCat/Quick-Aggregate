@@ -6,35 +6,38 @@ function AboutModal() {
   return (
     <>
       <div className="row info-modal">
-        <a
+        <button
           type="card"
+          data-toggle="modal"
+          data-target="#modal1"
           className="modal-image about1"
         >
-          <div data-toggle="modal"
-            data-target="#modal1" className=" wrapper image-hover  about-strip">
+          <div className=" wrapper image-hover  about-strip">
             <h4 className="modal-image-stripe">About Quick Aggregate</h4>
           </div>
-        </a>
-        <a
+        </button>
+        <button
           type="card"
+          data-toggle="modal"
+          data-target="#modal2"
           className="modal-image about2"
         >
-          <div data-toggle="modal"
-            data-target="#modal2"
+          <div
             className=" wrapper image-hover">
             <h4 className="modal-image-stripe">Your Keywords</h4>
           </div>
-        </a>
-        <a
+        </button>
+        <button
           type="card"
+          data-toggle="modal"
+          data-target="#modal3"
           className="modal-image about3"
         >
-          <div data-toggle="modal"
-            data-target="#modal3"
+          <div
             className=" wrapper image-hover">
             <h4 className="modal-image-stripe">Our APIs</h4>
           </div>
-        </a>
+        </button>
       </div>
 
       <div

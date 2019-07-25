@@ -41,6 +41,7 @@
   color: rgb(241, 237, 237);
   text-align: center;
   background: var(--highlighter-red);
+  background-size: auto 19.5 rem;
   padding-top: 8px;
   padding-bottom: 8px;
   margin-top: 15.5rem;
@@ -49,6 +50,8 @@
 .image-hover {
   margin: 0;
   position: relative;
+  right: 6px;
+  top: -1px;
   width: 19.5rem;
   height: 19.5rem;
   border-radius: 1em;
@@ -122,8 +125,8 @@ and (max-device-width : 1024px)
    .modal-image {
     width: 17rem;
     height: 17rem;
-   pointer-events: none;
-    touch-action: manipulation;
+    touch-action: none;
+    cursor: auto;
    }
 
    .image-hover {
@@ -138,21 +141,18 @@ and (max-device-width : 1024px)
     text-decoration: none;
     margin: 0 auto;
     margin-bottom: 15px;
-   pointer-events: none;
-    touch-action: manipulation;
+    touch-action: none;
   }
   .about2 {
     margin: 0 auto;
-   pointer-events: none;
-    touch-action: manipulation;
+    touch-action: none;
   }
   .about3 {
     margin: 0 auto;
     background-size: 29.5rem;
     background-position-x: -7.7rem;
     background-position-y: -2.3rem;
-   pointer-events: none;
-    touch-action: manipulation;
+    touch-action: none;
   }
   .about-strip {
     width: 100%;
@@ -171,7 +171,7 @@ and (max-device-width : 1024px)
     width: auto
   }
   .image-hover {
-    pointer-events: auto;
-    touch-action: manipulation;
+    touch-action: none;
+    cursor: auto;
   }
  }

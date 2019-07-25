@@ -94,7 +94,7 @@ class RegisterForm extends Component {
                 name="password"
               />
             </div>
-            <button onClick={this.handleFormSubmit} className="btn btn-primary">
+            <button onClick={this.handleFormSubmit} className="btn register-submit-btn">
               Submit
             </button>
           </form>

@@ -7,3 +7,13 @@ form {
   width: 90%;
   margin-left: 5%;
 }
+
+.register-submit-btn {
+  background: var(--highlighter-red);
+  color: white;
+}
+
+.register-submit-btn:hover {
+  background: gray;
+  color: white;
+}

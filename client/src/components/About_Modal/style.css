@@ -24,6 +24,7 @@
   text-decoration: none;
   border: none;
   padding: none;
+  display: inline-block;
   width: 19.5rem;
   height: 19.5rem;
   margin: 2rem;
@@ -48,8 +49,6 @@
 .image-hover {
   margin: 0;
   position: relative;
-  right: 6px;
-  top: -1px;
   width: 19.5rem;
   height: 19.5rem;
   border-radius: 1em;
@@ -172,7 +171,7 @@ and (max-device-width : 1024px)
     width: auto
   }
   .image-hover {
-    pointer-events: none;
-    touch-action: none;
+    pointer-events: auto;
+    touch-action: manipulation;
   }
  }

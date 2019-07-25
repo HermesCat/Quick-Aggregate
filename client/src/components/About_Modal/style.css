@@ -127,15 +127,18 @@ and (max-device-width : 1024px)
     text-decoration: none;
     margin: 0 auto;
     margin-bottom: 15px;;
+    touch-action: manipulation;
   }
   .about2 {
     margin: 0 auto;
+    touch-action: manipulation;
   }
   .about3 {
     margin: 0 auto;
     background-size: 29.5rem;
     background-position-x: -7.7rem;
     background-position-y: -2.3rem;
+    touch-action: manipulation;
   }
   .about-strip {
     width: 100%;

@@ -17,8 +17,21 @@
   margin: 25px 5px 25px 10px;
 }
 
-.edit_button_list:hover {
+#edit_button_click:hover {
   cursor: pointer;
-  color: blue;
   text-decoration: underline;
 }
+
+#edit_button_click {
+  font-size: 18px;
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+ {
+  #edit_button_click {
+    touch-action: manipulation;
+  }
+
+ }

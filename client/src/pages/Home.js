@@ -258,7 +258,7 @@ class Home extends Component {
     return (
       <>
         <div className="row home-content-row">
-          <div className="col-lg-5 col-s-12">
+          <div className="col-xl-5 col-lg-12">
             <div id="accordion">
               <div className="card" id="accordion1">
                 <div className="card-header" id="headingOne">
@@ -383,7 +383,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-7">
+          <div className="col-xl-7 col-lg-12">
             <div id="accordion">
               <div className="card" id="accordion4">
                 <div className="card-header" id="heading4">

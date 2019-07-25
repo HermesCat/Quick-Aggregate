@@ -161,7 +161,7 @@ and (max-device-width : 1024px)
     width: auto
   }
   .image-hover {
-  width: 0;
-  height: 0;
+    pointer-events: none;
+    touch-action: none;
   }
  }

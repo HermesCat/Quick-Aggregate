@@ -21,3 +21,14 @@
 .list-group-item:hover {
   background: lightgray;
 }
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+ {
+  .recipeImage {
+    height: 150px;
+    width: 150px;
+  }
+
+ }

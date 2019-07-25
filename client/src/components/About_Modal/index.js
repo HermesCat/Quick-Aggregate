@@ -5,9 +5,9 @@ import "./img/buttonIMG.jpg";
 function AboutModal() {
   return (
     <>
-      <div className="row info-modal-row">
+      <div className="row">
         <div
-          type="card"
+          type="button"
           className="modal-image about1"
           data-toggle="modal"
           data-target="#modal1"
@@ -17,7 +17,7 @@ function AboutModal() {
           </div>
         </div>
         <div
-          type="card"
+          type="button"
           className="modal-image about2"
           data-toggle="modal"
           data-target="#modal2"
@@ -27,7 +27,7 @@ function AboutModal() {
           </div>
         </div>
         <div
-          type="card"
+          type="button"
           className="modal-image about3"
           data-toggle="modal"
           data-target="#modal3"

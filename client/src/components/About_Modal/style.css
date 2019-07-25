@@ -60,6 +60,14 @@
   opacity: 0.8;
 }
 
+.image-hover:visited {
+  text-decoration: none;
+}
+
+.image-hover:active {
+  text-decoration: none;
+}
+
 .main-title-modal {
   padding-top: 0.5rem;
   margin-left: 0.8rem;

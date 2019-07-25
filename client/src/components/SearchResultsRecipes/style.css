@@ -32,3 +32,26 @@ and (max-device-width : 1024px)
   }
 
  }
+
+   /*-- iphone x---------------------------------- */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+  .recipeImage {
+    height: 75px;
+    width: 75px;
+    border-radius: 1em;
+  }
+  .recipeTitle {
+    font-size: 15px;
+    margin-left: 20px;
+  }
+  .recipePublisher {
+    font-size: 15px;
+    margin: 0;
+  }
+  .recipeRank {
+    overflow: none;
+  }
+}

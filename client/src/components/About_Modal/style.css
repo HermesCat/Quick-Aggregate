@@ -23,6 +23,7 @@
 .modal-image {
   text-decoration: none;
   border: none;
+  padding: none;
   width: 19.5rem;
   height: 19.5rem;
   margin: 2rem;
@@ -123,6 +124,7 @@ and (max-device-width : 1024px)
    }
 
   .about1 {
+    text-decoration: none;
     margin: 0 auto;
     margin-bottom: 15px;;
   }

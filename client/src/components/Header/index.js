@@ -66,7 +66,7 @@ class Header extends Component {
 
               <Router>
                 <>
-                  <div className="btn-group d-lg-none mobile-dropdown">
+                  <div className="btn-group mobile-dropdown">
                     <img type="" className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="hamburger-icon" alt="menu-icon" src={HamburgerIcon} />
                     <div className="dropdown-menu dropdown-menu-right">
                       <a className="dropdown-item" href="/" >HOME</a>
@@ -83,7 +83,7 @@ class Header extends Component {
                     </div>
                   </div>
                   <Nav />
-                  <div className="row  button-list d-none d-lg-block">
+                  <div className="row button-list">
                     <div className="col-12">
                       <button
                         type="button"

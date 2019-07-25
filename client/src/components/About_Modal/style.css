@@ -113,7 +113,7 @@ and (max-device-width : 1024px)
     width: 17rem;
     height: 17rem;
     pointer-events: none;
-    touch-action: manipulation;
+    touch-action: auto;
    }
 
    .image-hover {
@@ -129,12 +129,12 @@ and (max-device-width : 1024px)
     margin: 0 auto;
     margin-bottom: 15px;
     pointer-events: none;
-    touch-action: manipulation;
+    touch-action: auto;
   }
   .about2 {
     margin: 0 auto;
     pointer-events: none;
-    touch-action: manipulation;
+    touch-action: auto;
   }
   .about3 {
     margin: 0 auto;
@@ -142,7 +142,7 @@ and (max-device-width : 1024px)
     background-position-x: -7.7rem;
     background-position-y: -2.3rem;
     pointer-events: none;
-    touch-action: manipulation;
+    touch-action: auto;
   }
   .about-strip {
     width: 100%;
@@ -161,7 +161,7 @@ and (max-device-width : 1024px)
     width: auto
   }
   .image-hover {
-    touch-action: manipulation;
+    touch-action: auto;
     pointer-events: none;
   }
  }

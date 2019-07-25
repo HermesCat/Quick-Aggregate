@@ -60,6 +60,7 @@
   background: grey;
 }
 
+/*- iPad  ----------------------------------------*/
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
@@ -76,3 +77,17 @@ and (max-device-width : 1024px)
   }
 
  }
+
+ /*-- iphone x---------------------------------- */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) 
+{
+  .user-keyword {
+    border: none;
+    margin: 4px;
+    font-size: 13px;
+  }
+  
+}

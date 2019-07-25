@@ -24,3 +24,16 @@ and (max-device-width : 1024px)
     margin-bottom: 15px;
   }
 }
+
+/*-- iphone x---------------------------------- */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) 
+{
+  .btn-search {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}

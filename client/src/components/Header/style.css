@@ -241,3 +241,28 @@ and (max-device-width : 1024px)
       display: none;
   }
 }
+
+/*-- iphone x---------------------------------- */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) 
+{
+  .hamburger-icon {
+    height: 2.7rem;
+    width: 2.7rem;
+    margin: 0;
+    margin-left: 25px;
+    position: relative;
+    left: 0;
+    top: .4rem;
+  }
+
+  .main-title {
+    margin-top: .5rem;
+    margin-left: 0;
+  }
+  .highligher {
+    margin-left: 1rem;
+  }
+}

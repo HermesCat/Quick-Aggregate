@@ -25,7 +25,7 @@
 #edit_button_click {
   font-size: 18px;
 }
-
+/*  -ipad ------------------------------*/
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
@@ -35,3 +35,24 @@ and (max-device-width : 1024px)
   }
 
  }
+
+ 
+/*-- iphone x---------------------------------- */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) 
+{
+  #search_button_row h4  {
+    font-size: 19px;
+    margin-left: 1px;
+  }
+ #edit_button_click {
+    font-size: 14px;
+    margin: 0;
+    white-space:nowrap;
+    margin-right: 35px;
+    position: relative;
+    left: -35px;
+  }
+}

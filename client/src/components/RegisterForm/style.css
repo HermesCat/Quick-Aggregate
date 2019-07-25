@@ -3,11 +3,6 @@ form {
   width: 90%;
 }
 
-.card {
-  width: 90%;
-  margin-left: 5%;
-}
-
 .register-submit-btn {
   background: var(--highlighter-red);
   color: white;

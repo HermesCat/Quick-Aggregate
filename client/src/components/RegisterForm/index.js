@@ -43,61 +43,63 @@ class RegisterForm extends Component {
 
   render() {
     return (
-      <div class="card">
-        <div class="card-body">
-          <form>
-            <div className="form-group">
-              <label for="firstName">First Name</label>
-              <input
-                className="form-control"
-                value={this.state.firstName}
-                name="firstName"
-                onChange={this.handleInputChange}
-                type="text"
-                placeholder="First Name"
-              />
-            </div>
-            <div className="form-group">
-              <label for="LastName">Last Name</label>
-              <input
-                className="form-control"
-                value={this.state.lastName}
-                onChange={this.handleInputChange}
-                placeholder="Last Name"
-                name="lastName"
-                type="text"
-              />
-            </div>
-            <div className="form-group">
-              <label for="inputEmail">Email address</label>
-              <input
-                className="form-control"
-                type="email"
-                value={this.state.email}
-                onChange={this.handleInputChange}
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-                name="email"
-              />
-              <small id="emailHelp" className="form-text text-muted">
-                We'll never share your email with anyone else.
+      <div className="container">
+        <div class="card">
+          <div class="card-body">
+            <form>
+              <div className="form-group">
+                <label for="firstName">First Name</label>
+                <input
+                  className="form-control"
+                  value={this.state.firstName}
+                  name="firstName"
+                  onChange={this.handleInputChange}
+                  type="text"
+                  placeholder="First Name"
+                />
+              </div>
+              <div className="form-group">
+                <label for="LastName">Last Name</label>
+                <input
+                  className="form-control"
+                  value={this.state.lastName}
+                  onChange={this.handleInputChange}
+                  placeholder="Last Name"
+                  name="lastName"
+                  type="text"
+                />
+              </div>
+              <div className="form-group">
+                <label for="inputEmail">Email address</label>
+                <input
+                  className="form-control"
+                  type="email"
+                  value={this.state.email}
+                  onChange={this.handleInputChange}
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  name="email"
+                />
+                <small id="emailHelp" className="form-text text-muted">
+                  We'll never share your email with anyone else.
               </small>
-            </div>
-            <div className="form-group">
-              <label for="inputPassword">Password</label>
-              <input
-                className="form-control"
-                type="password"
-                value={this.state.password}
-                onChange={this.handleInputChange}
-                placeholder="Password"
-                name="password"
-              />
-            </div>
-            <button onClick={this.handleFormSubmit} className="btn register-submit-btn">
-              Submit
+              </div>
+              <div className="form-group">
+                <label for="inputPassword">Password</label>
+                <input
+                  className="form-control"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.handleInputChange}
+                  placeholder="Password"
+                  name="password"
+                />
+              </div>
+              <button onClick={this.handleFormSubmit} className="btn register-submit-btn">
+                Submit
             </button>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     );

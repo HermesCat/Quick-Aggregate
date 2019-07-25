@@ -156,4 +156,7 @@ and (max-device-width : 1024px)
     height: 175px;
     width: auto
   }
+  .image-hover {
+    touch-action: manipulation;
+  }
  }

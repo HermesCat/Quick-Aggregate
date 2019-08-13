@@ -5,18 +5,18 @@ import "./img/buttonIMG.jpg";
 function AboutModal() {
   return (
     <>
-      <div className="row">
-        <div
+      <div className="row info-modal-row">
+        <a
           type="card"
           className="modal-image about1"
           data-toggle="modal"
           data-target="#modal1"
         >
-          <div className=" wrapper image-hover">
+          <div className=" wrapper image-hover  about-strip">
             <h4 className="modal-image-stripe">About Quick Aggregate</h4>
           </div>
-        </div>
-        <div
+        </a>
+        <a
           type="card"
           className="modal-image about2"
           data-toggle="modal"
@@ -25,8 +25,8 @@ function AboutModal() {
           <div className=" wrapper image-hover">
             <h4 className="modal-image-stripe">Your Keywords</h4>
           </div>
-        </div>
-        <div
+        </a>
+        <a
           type="card"
           className="modal-image about3"
           data-toggle="modal"
@@ -35,7 +35,7 @@ function AboutModal() {
           <div className=" wrapper image-hover">
             <h4 className="modal-image-stripe">Our APIs</h4>
           </div>
-        </div>
+        </a>
       </div>
 
       <div
@@ -118,7 +118,7 @@ function AboutModal() {
               <h4 className="content-heading-medium">Your keywords make your unique searches more accessible than ever!</h4>
               <p>To use our application, select the social media platform from the "Search-Type" dropdown menu and enter your search into the "Keyword" field. Once you submit the search our application will display the results on the same webpage.
                 We have incorporated a feature that allows the user to save their searches for future use. Users can elect to save certain searches as color-coded buttons and use them to make searches. Users also have the option to delete saved searches.</p>
-              <img alt="keywords" src={require('./img/buttonIMG.jpg')} />
+              <img className="button-image" alt="keywords" src={require('./img/buttonIMG.jpg')} />
 
 
 

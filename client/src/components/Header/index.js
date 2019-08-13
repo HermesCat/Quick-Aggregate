@@ -85,13 +85,8 @@ class Header extends Component {
                     </div>
                   </div>
                   <Nav />
-<<<<<<< HEAD
-                  <div className="row  button-list">
-                    <div className="col-12">          
-=======
                   <div className="row button-list">
                     <div className="col-12">
->>>>>>> b5c5c77458e10d068ba63e7f167e1954a6bf6ebe
                       <button
                         onClick={this.toggleHidden}
                         type="button"
